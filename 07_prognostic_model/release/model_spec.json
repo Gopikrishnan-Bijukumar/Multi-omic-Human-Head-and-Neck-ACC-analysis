@@ -1,0 +1,162 @@
+{
+  "name": "ACC four-gene prognostic signature",
+  "genes": [
+    "DSCAM",
+    "ODC1",
+    "NCAPG",
+    "CCNB2"
+  ],
+  "signs": {
+    "DSCAM": 1.0,
+    "ODC1": 1.0,
+    "NCAPG": 1.0,
+    "CCNB2": 1.0
+  },
+  "discovery_coefficients": {
+    "DSCAM": 0.1729845106601715,
+    "ODC1": 0.16769814491271973,
+    "NCAPG": 0.16218635439872742,
+    "CCNB2": 0.15292729437351227
+  },
+  "scheme": "sign",
+  "scoring": "mean of sign-weighted rank-inverse-normal expression; all four discovery coefficients are positive, so the deployed score is an unweighted mean. The hierarchical Bayesian procedure selected genes and directions and does not weight the score.",
+  "input": "log2 depth-normalised expression, as in outputs/03_harmonized/*_norm_log2.csv",
+  "frozen_reference": {
+    "description": "discovery-cohort raw log2 values for the four genes; the frozen single-sample transform maps a new patient into these ranks",
+    "n_samples": 20,
+    "samples": [
+      "P14",
+      "P08",
+      "P02",
+      "P12",
+      "P13",
+      "P09",
+      "P10",
+      "P01",
+      "P11",
+      "P04",
+      "P23",
+      "P20",
+      "P24",
+      "P22",
+      "P21",
+      "P16",
+      "P17",
+      "P15",
+      "P18",
+      "P25"
+    ],
+    "values": {
+      "DSCAM": [
+        0.108,
+        0.05226,
+        0.04821,
+        0.55017,
+        0.02535,
+        0.0646,
+        0.23393,
+        0.52858,
+        0.0665,
+        1.8406,
+        3.70372,
+        4.19095,
+        0.2029,
+        5.01643,
+        4.26972,
+        5.18458,
+        2.6579,
+        1.26366,
+        4.38691,
+        5.0041
+      ],
+      "ODC1": [
+        5.13754,
+        5.83758,
+        5.02397,
+        5.2095,
+        6.14099,
+        4.86048,
+        5.28509,
+        6.19373,
+        5.28794,
+        6.5449,
+        6.54337,
+        6.42453,
+        5.8143,
+        7.02129,
+        7.23641,
+        7.25882,
+        5.82377,
+        6.62389,
+        6.74857,
+        7.33869
+      ],
+      "NCAPG": [
+        2.68294,
+        2.73214,
+        2.52121,
+        2.00636,
+        2.7032,
+        1.93224,
+        2.93382,
+        2.84146,
+        2.61867,
+        3.06319,
+        5.28323,
+        3.69525,
+        1.93077,
+        4.03927,
+        4.59034,
+        3.68728,
+        2.49612,
+        3.18243,
+        4.41044,
+        4.25989
+      ],
+      "CCNB2": [
+        2.45651,
+        2.40038,
+        2.13695,
+        1.66611,
+        2.2874,
+        1.20489,
+        2.88777,
+        2.67962,
+        2.07843,
+        2.91527,
+        4.83126,
+        3.27594,
+        2.04736,
+        3.53199,
+        4.0364,
+        3.79427,
+        2.34379,
+        2.80871,
+        4.26523,
+        4.35301
+      ]
+    }
+  },
+  "frozen_threshold": {
+    "value": -0.062171936129763586,
+    "derivation": "Youden point of the discovery-cohort frozen score; uses no validation data",
+    "status": "post hoc - designed after the Danish cohort was unblinded; externally evaluated, not prospectively validated",
+    "dk_performance": {
+      "hr": 3.3829751372814765,
+      "ci": [
+        1.4333280644126751,
+        7.984578732262642
+      ],
+      "logrank_p": 0.0032749824310143952
+    }
+  },
+  "performance": {
+    "dk_batch_C_5yr": 0.6714922048997772,
+    "dk_frozen_C_5yr": 0.6893095768374164
+  },
+  "provenance": {
+    "selected_by": "work/13_compact_panel.py from work/11_lock_and_validate.py",
+    "model_code": "work/mlbayes.py (MultiLevelModel, mean-field ADVI in PyTorch)",
+    "locked_artefact": "work/outputs_compact/COMPACT_model.json"
+  }
+}

@@ -1,0 +1,25 @@
+# Environment used for every result in this release.
+# Captured 2026-08-19T21:13:59Z
+
+interpreter: python
+python: 3.11.15
+numpy: 2.4.6
+pandas: 3.0.3
+scipy: 1.17.1
+sklearn: 1.9.0
+torch: 2.11.0+cu128
+lifelines: 0.30.3
+sksurv: 0.28.0
+statsmodels: 0.14.6
+matplotlib: 3.11.1
+anndata: 0.12.19
+scanpy: 1.11.5
+pydeseq2: 0.5.4
+h5py: 3.16.0
+pyarrow: 23.0.1
+
+gpu: NVIDIA GeForce RTX 5080, 580.173.02
+
+R: R version 4.4.3 (2025-02-28) -- "Trophy Case"
+DWLS: 0.1.0 
+quadprog: 1.5.8 

@@ -1,0 +1,5 @@
+cohort,n,endpoint,events,role,survival_times_available,used_for_fitting
+internal (discovery),20,Poor vs Good outcome (binary),10 Poor / 10 Good,discovery - model fitting and gene selection,no - `years` holds only the 2/5 group label,yes
+Danish (DK),54,"overall survival, censored at 60 months","21 deaths by 60 months, 0 censored before 60 months",confirmatory external validation - the single primary claim,yes,no - never entered any fit
+CCR2020 (MD Anderson),54,ACC-I vs ACC-II molecular subtype,20 ACC-I / 34 ACC-II,"pre-specified external biological validation - SUBTYPE, not survival",no - censoring times missing for all 20 living patients,no
+Frerich 2018 (Oncotarget),66,published poor-outcome Group 1 vs Group 2 (clustering-derived subtype label),14 Group 1 / 52 Group 2,external biological replication of the CCR2020 subtype test - NOT independent of it (~18 shared MD Anderson patients),"no - absent from PRJNA287156, GEO and the paper supplement",no

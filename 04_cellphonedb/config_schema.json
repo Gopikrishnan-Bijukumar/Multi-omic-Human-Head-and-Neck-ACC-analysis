@@ -1,0 +1,220 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "clinical_outcome_v2/config_schema.json",
+  "title": "CellPhoneDB v5 clinical-outcome re-analysis configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "project_root",
+    "input_h5ad",
+    "cpdb_database",
+    "code_root",
+    "output_root",
+    "sample_column",
+    "cell_type_column",
+    "outcome_column",
+    "counts_layer",
+    "outcomes",
+    "patient_celltype_min_cells",
+    "pooled_celltype_min_per_group",
+    "pooled_downsample_seeds",
+    "secondary_core_min_patients",
+    "abundance_sensitivity_threshold",
+    "cpdb_iterations",
+    "cpdb_expression_fraction",
+    "cpdb_nominal_pvalue",
+    "cpdb_debug_seed",
+    "cpdb_result_precision",
+    "threads",
+    "min_evaluable_per_group",
+    "min_nonzero_total",
+    "fdr_method",
+    "fdr_alpha",
+    "bootstrap_resamples",
+    "permutation_resamples",
+    "analysis_seed",
+    "mannwhitney_method",
+    "covariates_available",
+    "survival_aware_analysis",
+    "covariate_csv",
+    "covariate_column_map",
+    "forbidden_obs_columns"
+  ],
+  "properties": {
+    "project_root": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input_h5ad": {
+      "type": "string",
+      "pattern": "\\.h5ad$"
+    },
+    "cpdb_database": {
+      "type": "string",
+      "pattern": "\\.zip$"
+    },
+    "code_root": {
+      "type": "string",
+      "minLength": 1
+    },
+    "output_root": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sample_column": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cell_type_column": {
+      "type": "string",
+      "minLength": 1
+    },
+    "outcome_column": {
+      "type": "string",
+      "minLength": 1
+    },
+    "counts_layer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "outcomes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "uniqueItems": true
+    },
+    "patient_celltype_min_cells": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "pooled_celltype_min_per_group": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "pooled_downsample_seeds": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "secondary_core_min_patients": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "abundance_sensitivity_threshold": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "null means the abundance sensitivity sweep is disabled."
+    },
+    "cpdb_iterations": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "cpdb_expression_fraction": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "cpdb_nominal_pvalue": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 1
+    },
+    "cpdb_debug_seed": {
+      "type": "integer"
+    },
+    "cpdb_result_precision": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 15
+    },
+    "threads": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "min_evaluable_per_group": {
+      "type": "integer",
+      "minimum": 2
+    },
+    "min_nonzero_total": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "fdr_method": {
+      "type": "string",
+      "enum": [
+        "fdr_bh",
+        "fdr_by"
+      ]
+    },
+    "fdr_alpha": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 1
+    },
+    "bootstrap_resamples": {
+      "type": "integer",
+      "minimum": 100
+    },
+    "permutation_resamples": {
+      "type": "integer",
+      "minimum": 99
+    },
+    "analysis_seed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "mannwhitney_method": {
+      "type": "string",
+      "enum": [
+        "hybrid",
+        "exact",
+        "asymptotic"
+      ],
+      "description": "hybrid == exact when tie-free, asymptotic under ties."
+    },
+    "covariates_available": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "survival_aware_analysis": {
+      "type": "string",
+      "enum": [
+        "not_possible",
+        "possible",
+        "performed"
+      ]
+    },
+    "covariate_csv": {
+      "type": "string",
+      "description": "Authoritative patient-level covariate table. The source for every logical name in covariates_available."
+    },
+    "covariate_column_map": {
+      "type": "object",
+      "description": "Maps each logical covariate name to its column in covariate_csv.",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "forbidden_obs_columns": {
+      "type": "array",
+      "description": "obs columns that must never inform analysis. batch_1 mislabels P07; site splits Base of Tongue into outcome-segregated BOT/BaseofTongue labels; model_outcome is the superseded grouping; outcome duplicates clinical_outcome. Reading them in 00_audit to DOCUMENT the discrepancy is expected and allowed; using them to derive groups, covariates or endpoints is not.",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  }
+}

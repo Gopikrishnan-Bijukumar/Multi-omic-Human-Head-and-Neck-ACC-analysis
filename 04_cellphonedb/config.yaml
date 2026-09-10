@@ -1,0 +1,75 @@
+# CellPhoneDB v5 clinical-outcome re-analysis -- shared configuration.
+#
+# This file is the single source of truth for every notebook in
+# clinical_outcome_v2. Load it with utils.load_config(); never re-declare any
+# of these values inside a notebook. The sha256 of the resolved config
+# (utils.config_hash) is stamped into every _SUCCESS.json so that a run
+# performed under a different configuration is never mistaken for complete.
+
+project_root: ${ACC_DATA_ROOT}
+input_h5ad: ${ACC_DATA_ROOT}/outputs/h5ad_files/inprogress_3.h5ad
+cpdb_database: ${ACC_DATA_ROOT}/reference/cellphonedb/cellphonedb.zip
+code_root: ${ACC_DATA_ROOT}/scripts/named_scripts/cellphoneDB_scripts/clinical_outcome_v2
+output_root: ${ACC_DATA_ROOT}/outputs/cellphoneDB/clinical_outcome_v2
+
+sample_column: batch
+cell_type_column: annot_6
+outcome_column: clinical_outcome
+counts_layer: counts
+outcomes: [Good, Poor]
+
+patient_celltype_min_cells: 10
+pooled_celltype_min_per_group: 10
+pooled_downsample_seeds: [0, 1, 2, 3, 4]
+secondary_core_min_patients: 22
+abundance_sensitivity_threshold: null
+
+cpdb_iterations: 1500
+cpdb_expression_fraction: 0.1
+cpdb_nominal_pvalue: 0.05
+cpdb_debug_seed: 6
+cpdb_result_precision: 6
+threads: 20
+
+min_evaluable_per_group: 6
+min_nonzero_total: 6
+fdr_method: fdr_bh
+fdr_alpha: 0.05
+bootstrap_resamples: 10000
+permutation_resamples: 99999
+analysis_seed: 20260731
+mannwhitney_method: hybrid
+
+# --- Covariates -------------------------------------------------------------
+# `site_of_extraction` is a LOGICAL name. Its authoritative source is the
+# "Site of Extraction" column of covariate_csv -- NOT obs['site'].
+#
+# obs['site'] must never be used raw. Verified 2026-07-31: it splits Base of
+# Tongue into two labels that segregate perfectly by outcome --
+#   BOT          -> P11, P09   (both Good)
+#   BaseofTongue -> P20, P15  (both Poor)
+# so the only outcome-BALANCED site (2 Good / 2 Poor in the CSV) would appear
+# as two perfectly confounded sites, manufacturing a confounding signal that
+# does not exist. obs['site'] also codes Unknown as the string "NA".
+# If obs['site'] is used for any reason it must first be normalised against
+# covariate_csv and the 11 -> 10 label collapse asserted: over the 24
+# single-cell patients obs['site'] has 11 distinct labels and the CSV has 10,
+# the difference being the BOT / BaseofTongue split. (The CSV has 11 labels
+# across all 25 rows; the extra is Buccal Mucosa for P14, who has no
+# single-cell data and is correctly absent -- n = 24.)
+#
+# No age, sex, stage, treatment, tumour purity or processing batch exists in
+# either source, so no adjusted analysis is possible -- see LIMITATIONS.md.
+covariates_available: [site_of_extraction]
+covariate_csv: ${ACC_DATA_ROOT}/clinical_info.csv
+covariate_column_map:
+  site_of_extraction: Site of Extraction
+forbidden_obs_columns: [batch_1, site, model_outcome, outcome]
+
+# --- Survival ---------------------------------------------------------------
+# obs['years_of_survival'] and covariate_csv "Years" agree exactly on all 24
+# patients and take only the values 2, 3, 5. clinical_outcome is a
+# deterministic function of them (2 -> Poor; 3, 5 -> Good). There is no event
+# indicator and no continuous follow-up time, so a survival-aware analysis
+# cannot be constructed from the available data. Do not retrofit one.
+survival_aware_analysis: not_possible

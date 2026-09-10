@@ -1,0 +1,40 @@
+# ---------------------------------------------------------------------------
+# NEVER COMMIT: the mapping that links the P01-P25 pseudonyms back to the
+# original sample identifiers. Matched several ways so that moving or renaming
+# it does not silently expose it.
+# ---------------------------------------------------------------------------
+ID_MAPPING_PRIVATE.csv
+**/ID_MAPPING_PRIVATE.csv
+*_PRIVATE*
+**/*_PRIVATE*
+*PRIVATE*.csv
+
+# The build tooling is a local provenance record. It necessarily encodes the
+# original project's directory layout and filenames, some of which contain
+# sample identifiers, so it is excluded by default. Review it and remove this
+# rule if you decide to publish it.
+_build_tooling/
+
+# Data and results are not distributed with this repository
+data/
+outputs/
+reference/
+*.h5
+*.h5ad
+*.rds
+*.RDS
+*.mtx
+*.loom
+
+# Notebook and interpreter state
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.Rhistory
+.RData
+.Rproj.user/
+
+# OS noise
+.DS_Store
+Thumbs.db

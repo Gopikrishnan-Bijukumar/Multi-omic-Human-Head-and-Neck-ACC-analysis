@@ -1,0 +1,40 @@
+quantity,value,uncertainty_or_note,tier,source_file,generating_script
+"DK 5-year overall survival, C-index",0.6714922048997772,0.541-0.801 (bootstrap),confirmatory,outputs_compact/COMPACT_validation.json,13_compact_panel.py
+"DK 5-year, HR per score SD",1.7403139767176414,"1.103-2.745, p=0.0171",confirmatory,outputs_metrics_v2/UNIFIED_metrics.json,36_unified_metrics_v2.py
+DK time-dependent AUC at 60 months,0.68831,0.526-0.832,confirmatory,outputs_metrics_v2/UNIFIED_metrics.json,36_unified_metrics_v2.py
+"DK matched random-panel null, empirical p",0.0033,"32 of 10,000 panels >= observed",confirmatory,outputs_nulls/NULLS_results.json,28_matched_nulls.py
+CCR2020 ACC-I vs ACC-II subtype AUC,0.8838235294117647,0.773-0.968 (bootstrap),prespecified,outputs_ccr2020/CCR2020_results.json,23_ccr2020_external.py
+"CCR2020 subtype, Holm-adjusted p",6.137e-06,-,prespecified,outputs_ccr2020/CCR2020_results.json,23_ccr2020_external.py
+CCR2020 matched random-panel p,0.013499,"134 of 10,000",prespecified,outputs_nulls/NULLS_results.json,28_matched_nulls.py  [supersedes 0.0145 in CCR2020_results.json]
+CCR2020 time-to-death Spearman rho (decedents only),-0.32895,p=0.0575,negative,outputs_ccr2020/CCR2020_results.json,23_ccr2020_external.py  [FAILED its criterion; exploratory]
+DK full-follow-up C-index,0.6418495297805643,"HR/SD 1.527, p=0.0167",secondary,outputs_compact/COMPACT_validation.json,13_compact_panel.py
+DK adjusted HR (stage + solid histology),1.53197,"1.006-2.332, p=0.0466; 6.7 events/parameter",secondary,outputs_coxdx/COXDX_results.json,26_cox_diagnostics.py
+"Proportional-hazards test, score",0.779432,spline comparison p=0.774,secondary,outputs_coxdx/COXDX_results.json,26_cox_diagnostics.py
+"Frozen single-sample score, DK C",0.6893095768374164,"HR/SD 1.936 (1.186-3.162), p=0.0082",exploratory,outputs_threshold/THRESHOLD_results.json,27_threshold.py  [POST HOC: designed after DK unblinded]
+"Discovery-locked threshold, DK HR",3.3829751372814765,"1.433-7.985, log-rank p=0.0033",exploratory,outputs_threshold/THRESHOLD_results.json,27_threshold.py  [POST HOC]
+"DK three-compartment composition score, C",0.6559,"HR/SD 1.630, p=0.0391",prespecified,outputs_deconv/DK_COMPOSITION_results.json,22_dk_composition.py
+"Composition vs expression score, Spearman",0.477,p=2.67e-4; combining changes C by -0.006,secondary,outputs_deconv/DK_COMPOSITION_results.json,22_dk_composition.py
+Deconvolution gate G3 (per-patient composition r),0.685,required 0.70 - FAILED; rank-based statements only,negative,outputs_deconv/GATE_results.json,21_signature_and_gate.py
+Internal leakage-free discovery AUC,0.7834523809523809,2.5-97.5 pct 0.7475-0.8152 over 14 draws; published 0.810 lies inside,audit,outputs_metrics/INTERNAL_stability_full.json,31e_internal_stability_full.py
+Measured information leak (paired),0.10640000000000005,+/- 0.0247,audit,outputs_metrics/INTERNAL_stability_full.json,31e_internal_stability_full.py
+Originally reported internal AUC (WITHDRAWN),0.906,do not quote,audit,outputs_nested/NESTED_results.json,25_nested_cv.py  [WITHDRAWN]
+"Locked-panel recovery, leakage-free 25-fold","DSCAM 5/25, ODC1 5/25, NCAPG 3/25, CCNB2 0/25",no gene above 5/25,audit,outputs_nested/NESTED_results.json,25b_nested_fixedk.py
+ADVI run-to-run: top-4 Jaccard across 20 seeds,0.08100250626566416,beta Pearson 0.948 but |beta| rank Spearman 0.241,audit,outputs_vi/VI_DIAGNOSTICS.json,33_vi_diagnostics.py
+ADVI run-to-run: DK C of each seed's own top-4,0.6079621380846325,SD 0.043; locked panel 0.671,audit,outputs_vi/VI_DIAGNOSTICS.json,33_vi_diagnostics.py
+Hyperparameter sensitivity: DK C over 12 configs x 5 seeds,0.6006495916852264,"SD 0.038, range 0.522-0.689; 60/60 distinct panels",audit,outputs_vi/VI_DIAGNOSTICS.json,33_vi_diagnostics.py
+"Penalized comparator selected by discovery LOO, DK C",0.6024498886414253,"L1 C=0.3, LOO AUC 0.830; top-4 form 0.584; locked panel 0.671",audit,outputs_vi/COMPARATOR.json,33b_comparator.py
+Axis stability: proliferation-programme enrichment in fold panels,24.345308593235952,p<1e-4; 16/25 folds vs best single gene 5/25,audit,outputs_axis/AXIS_stability.json,34_axis_stability.py
+Axis stability: fold-panel DK C,0.5959910913140312,SD 0.050; random panels 0.509; NOT significantly above random (p=0.094),audit,outputs_axis/AXIS_stability.json,34_axis_stability.py
+DWLS cross-check: composite score rank agreement,0.9215542521994134,published CRAN DWLS 0.1.0 vs local; reference failed on 22/54 samples,audit,outputs_dwls/DWLS_CROSSCHECK.json,35_dwls_crosscheck.py
+DWLS cross-check: synthetic per-compartment recovery,0.7864661654135338,reference 0.738 on the same mixtures,audit,outputs_dwls/DWLS_CROSSCHECK.json,35_dwls_crosscheck.py
+"Brayer 14-gene classifier, DK C",0.54009,our 0.671; NOT a superiority claim - see section 9,secondary,outputs_metrics_v2/UNIFIED_metrics.json,18_brayer_benchmark.py
+8-gene panel leave-one-gene-out gate,FAILED (p_max 0.333 vs <0.05),"delta-C vs 4-gene -0.001 (-0.066, +0.057)",negative,outputs_panel8/PANEL8_validation.json,16_panel8_lock.py
+"Data-derived DK subgroup, best Holm p",0.23926,raw 0.0342 - FAILED after correction,negative,outputs_subtype/SUBTYPE_results.json,17_subtype_discovery.py
+Frerich2018 poor-outcome Group 1 AUC (batch score),0.7596153846153846,"0.559-0.928 (bootstrap); n=66, 14 vs 52",replication-not-independent,outputs_frerich/FRERICH_results.json,40_frerich_external.py
+Frerich2018 Group 1 Mann-Whitney p (one-sided),0.0015550399710756448,-,replication-not-independent,outputs_frerich/FRERICH_results.json,40_frerich_external.py
+Frerich2018 Group 1 label-permutation p,0.0010998900109989002,"10,000 permutations",replication-not-independent,outputs_frerich/FRERICH_results.json,40_frerich_external.py
+Frerich2018 matched random-panel p,0.007599240075992401,"75 of 10,000; null median 0.470",replication-not-independent,outputs_frerich/FRERICH_results.json,40_frerich_external.py
+Frerich2018 Group 1 AUC (frozen single-sample score),0.7548076923076924,post hoc transform; same 66 patients,replication-not-independent,outputs_frerich/FRERICH_results.json,40_frerich_external.py
+Frerich2018 discovery-locked threshold odds ratio,7.5,"sens 0.714, spec 0.75, Fisher p=0.0021",replication-not-independent,outputs_frerich/FRERICH_results.json,40_frerich_external.py
+Frerich2018 x CCR2020 shared patients (estimated),18.0,"null mean 2.63, 95th pct 5, p<0.0005 - COHORTS NOT INDEPENDENT",audit,outputs_frerich/frerich_ccr2020_shared_patients.csv,40_frerich_external.py
+Frerich2018 DSCAM single-gene AUC,0.801,exceeds the 4-gene panel; DSCAM zero in 21/66 samples,audit,outputs_frerich/FRERICH_results.json,40_frerich_external.py

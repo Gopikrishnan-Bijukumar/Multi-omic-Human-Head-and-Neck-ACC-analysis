@@ -1,0 +1,106 @@
+{
+ "generated_utc": "2026-08-27T21:07:34.976972+00:00",
+ "note": "Fingerprints for every raw and harmonised input. Before this release the five external-cohort inputs (DK x2, CCR2020 x2, Brayer) carried no hash anywhere in the project, although scripts/common.py already implemented the machinery. | 2026-08-27: added the three Stage 6 Frerich-2018 inputs. The source file external_frerich/frerich_hg38_TXcases.csv was copied unmodified (hash verified identical) and never edited.",
+ "inputs": {
+  "internal_bulk_rnaseq": {
+   "path": "${ACC_DATA_ROOT}/bulk_rna_data/h5ad_files/bulk_counts.h5ad",
+   "size_bytes": 17380166,
+   "hash": "sha256:a7d0f3974646eb5d53c233659bdd44cf627a3f955e89f393ff19682810185d84:size=17380166"
+  },
+  "single_cell": {
+   "path": "${ACC_DATA_ROOT}/outputs/h5ad_files/inprogress_3.h5ad",
+   "size_bytes": 8137105398,
+   "hash": "sha256-first67108864B:a6e26f9b853bb368f94cb240d01a8b28916ffc175636d16471eef0bb9d19e037:size=8137105398"
+  },
+  "wgcna_module_table": {
+   "path": "${ACC_DATA_ROOT}/bulk_rna_data/outputs/images/clinical_outcome/wgcna/06_gene_info_complete.csv",
+   "size_bytes": 16538630,
+   "hash": "sha256:0f5ede755bb75e0bb2bc69009f2d7849e2898e1e9009158b32c1515ba5f5dd12:size=16538630"
+  },
+  "pydeseq2_significant": {
+   "path": "${ACC_DATA_ROOT}/bulk_rna_data/outputs/pydeseq2_out/clinical_outcome/DEG_significant.csv",
+   "size_bytes": 168482,
+   "hash": "sha256:72422a839b63768e22e1f159aa0af8ebe464fcace26f3317308e27ed7e0f53fc:size=168482"
+  },
+  "pydeseq2_all": {
+   "path": "${ACC_DATA_ROOT}/bulk_rna_data/outputs/pydeseq2_out/clinical_outcome/DEG_results.csv",
+   "size_bytes": 6174396,
+   "hash": "sha256:ffbbd266fa631d8b5e9257c5f13785d7c147df051fd145b7ffc2486663f7bfc2:size=6174396"
+  },
+  "clinical_metadata": {
+   "path": "${ACC_DATA_ROOT}/clinical_info.csv",
+   "size_bytes": 1128,
+   "hash": "sha256:e86cff9db0aaa509afe4a0ecbeb6fb36a040618d0875c3f5e11ff909699fa6b3:size=1128"
+  },
+  "dk_expression": {
+   "path": "${ACC_DATA_ROOT}/external_dk/DK_All_Genes_Data.csv",
+   "size_bytes": 6781166,
+   "hash": "sha256:ad77b91eb6017c4b5f683734de3efe1ef1763c7df1ef605de076a0d7120aa7aa:size=6781166"
+  },
+  "dk_survival": {
+   "path": "${ACC_DATA_ROOT}/external_dk/DK_sample_data_table2.csv",
+   "size_bytes": 10034,
+   "hash": "sha256:ee0654e97501b63038530ef425f65bde8f6d8d468860198a6cfdf79c72d7ddac:size=10034"
+  },
+  "ccr2020_expression": {
+   "path": "${ACC_DATA_ROOT}/external_ccr2020/ACC_RNAseq.xlsx",
+   "size_bytes": 32943980,
+   "hash": "sha256:d5155579773804b67e1cf3a0745a52178b88f9af7706e25bba022513fd361d5d:size=32943980"
+  },
+  "ccr2020_clinical": {
+   "path": "${ACC_DATA_ROOT}/external_ccr2020/CCR2020_Clinical.xlsx",
+   "size_bytes": 19008,
+   "hash": "sha256:ff8387785fd851006952228e9208d6de029b5e417b0334664f87aec19321c95d:size=19008"
+  },
+  "brayer_tableS2": {
+   "path": "${ACC_DATA_ROOT}/external_brayer_supp/TableS2_Poor_Survival_DE.csv",
+   "size_bytes": 220455,
+   "hash": "sha256:d97d82e2deef3f1f581b68a1b7d2c71a83acefaa466e9ba00821c63fde29d805:size=220455"
+  },
+  "brayer_tableS1": {
+   "path": "${ACC_DATA_ROOT}/external_brayer_supp/TableS1_NoMYB_DE.csv",
+   "size_bytes": 266980,
+   "hash": "sha256:51bed1de84e462c02294f09ee0da9358a2c048bd0869d5d36f4ff93eae761f11:size=266980"
+  },
+  "brayer_table5_screenshot": {
+   "path": "${ACC_DATA_ROOT}/table_5_ss.png",
+   "size_bytes": 82655,
+   "hash": "sha256:b40864ca15e447010e1b90348f73cc64fef6676b45e0f45d9d3bfb23e2e59907:size=82655"
+  },
+  "harmonized_internal": {
+   "path": "${ACC_DATA_ROOT}/outputs/03_harmonized/train_norm_log2.csv",
+   "size_bytes": 2507745,
+   "hash": "sha256:905fc9fe58114a199167a8dc917e7b7a962df5a2e5e7ee9b3c227ade085acd97:size=2507745"
+  },
+  "harmonized_dk": {
+   "path": "${ACC_DATA_ROOT}/outputs/03_harmonized/dk_norm_log2.csv",
+   "size_bytes": 7565342,
+   "hash": "sha256:2acb3c5731f56af219ae51717fd809bce7dcbed1ab93b02000747d36489c26a1:size=7565342"
+  },
+  "evidence_table": {
+   "path": "${ACC_DATA_ROOT}/outputs/01_candidate_table/evidence/gene_evidence_wide.csv",
+   "size_bytes": 349679,
+   "hash": "sha256:c9585c8e2fafb1310a4837faa0c2937eeddae696f10c18384c27c6133cfd1a3f:size=349679"
+  },
+  "sample_labels": {
+   "path": "${ACC_DATA_ROOT}/outputs/01_candidate_table/sample_labels.csv",
+   "size_bytes": 894,
+   "hash": "sha256:57cb997b625a7400cbf33b0f52fcc3cca3c0191a86a81c1d7e4950a40ca5cc39:size=894"
+  },
+  "frerich_expression": {
+   "path": "${ACC_DATA_ROOT}/external_frerich/frerich_hg38_TXcases.csv",
+   "size_bytes": 7239344,
+   "hash": "sha256:97886fa12c7779ee21a5be383fab58bfc58b2021a273c02b5938d29c238d61de:size=7239344"
+  },
+  "frerich_case_metadata": {
+   "path": "${ACC_DATA_ROOT}/external_frerich/frerich_case_metadata.csv",
+   "size_bytes": 3979,
+   "hash": "sha256:3a233e69d3d3407f5d8c14f1f65474cc1bc9b9fff7d73cab4cd67c4b102bbb52:size=3979"
+  },
+  "frerich_biosample_records": {
+   "path": "${ACC_DATA_ROOT}/external_frerich/biosample_PRJNA287156_frerich68.txt",
+   "size_bytes": 33396,
+   "hash": "sha256:3df62de99248e8079512d7487c9815c1207aaf53d1c825ccb9f63bd22aef84f6:size=33396"
+  }
+ }
+}
