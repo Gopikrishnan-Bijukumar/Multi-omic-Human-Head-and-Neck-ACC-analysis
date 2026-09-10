@@ -49,12 +49,12 @@ Every top-level folder corresponds to a numbered section of the paper's Suppleme
 ```mermaid
 flowchart TD
     subgraph DISC["Internal discovery cohort — 25 patients, pseudonymised P01–P25"]
-        B["<b>01</b> Bulk RNA-seq<br/>20 tumours, 10 sites<br/><i>PyDESeq2 · GSEA · WGCNA · ORA</i>"]
-        S["<b>02</b> Single-cell RNA-seq<br/>24 samples<br/><i>scVI · 3-way doublet consensus · annotation</i>"]
+        B["<b>01</b> Bulk RNA-seq<br/>20 tumours · 10 sites<br/><i>PyDESeq2 · GSEA · WGCNA · ORA</i>"]
+        S["<b>02</b> Single-cell RNA-seq<br/>24 samples<br/><i>scVI · 3-way doublet consensus</i>"]
         C["<b>03</b> scCODA<br/><i>cell-type abundance</i>"]
         P["<b>04</b> CellPhoneDB<br/><i>cell–cell communication</i>"]
         T["<b>05</b> Trajectory<br/><i>CytoTRACE2 · Monocle3</i>"]
-        X["<b>06</b> Spatial<br/>4 Visium 55µm · 2 Visium HD 16µm<br/><i>Giotto · SpatialDWLS</i>"]
+        X["<b>06</b> Spatial<br/>4 Visium 55µm · 2 HD 16µm<br/><i>Giotto · SpatialDWLS</i>"]
     end
 
     S --> C
@@ -62,23 +62,33 @@ flowchart TD
     S --> T
     S --> X
 
-    B --> CAND["<b>Candidate gene nomination</b><br/>WGCNA modules + pseudobulk DE + spatial evidence"]
-    S --> CAND
-    X --> CAND
+    B ==> CAND["<b>Candidate gene nomination</b><br/>WGCNA modules · pseudobulk DE · spatial evidence"]
+    S ==> CAND
+    X ==> CAND
 
-    CAND --> BAYES["<b>07</b> Three-level hierarchical<br/>Bayesian shrinkage (ADVI)<br/><i>source → module → gene</i>"]
-    BAYES --> PANEL["<b>Locked four-gene panel</b><br/>DSCAM · ODC1 · NCAPG · CCNB2"]
+    CAND ==> BAYES["<b>07</b> Three-level hierarchical<br/>Bayesian shrinkage · ADVI<br/><i>source → module → gene</i>"]
+    BAYES ==> PANEL["<b>LOCKED FOUR-GENE PANEL</b><br/>DSCAM · ODC1 · NCAPG · CCNB2"]
 
-    PANEL --> DK["<b>Danish cohort</b> · n = 54<br/>overall survival<br/><i>the single primary claim</i>"]
-    PANEL --> CCR["<b>CCR2020</b> MD Anderson · n = 54<br/>ACC-I vs ACC-II subtype"]
-    PANEL --> FRE["<b>Frerich 2018</b> · n = 66<br/>cross-platform replication"]
+    PANEL ==> DK["<b>Danish cohort</b> · n = 54<br/>overall survival<br/><b>C = 0.671</b> · HR/SD 1.74<br/><i>the single primary claim</i>"]
+    PANEL --> CCR["<b>CCR2020</b> MD Anderson · n = 54<br/>ACC-I vs ACC-II subtype<br/><b>AUC = 0.884</b>"]
+    PANEL --> FRE["<b>Frerich 2018</b> · n = 66<br/>cross-platform replication<br/><b>OR = 7.5</b>"]
 
-    style PANEL fill:#0b7285,stroke:#083f4d,color:#ffffff
-    style BAYES fill:#e7f5f8,stroke:#0b7285,color:#0b2530
-    style CAND fill:#e7f5f8,stroke:#0b7285,color:#0b2530
-    style DK fill:#fff4e6,stroke:#d9480f,color:#3d1a06
-    style CCR fill:#fff4e6,stroke:#d9480f,color:#3d1a06
-    style FRE fill:#fff4e6,stroke:#d9480f,color:#3d1a06
+    %% ---- UNM palette: Cherry #BA0C2F, Turquoise #00A9B7, Zia Yellow #FFC72C, Silver #63666A
+    style DISC fill:#f7f8f8,stroke:#63666A,stroke-width:2px,color:#2b2d2f
+    style B    fill:#d4f0f3,stroke:#00A9B7,stroke-width:2px,color:#05343a
+    style S    fill:#d4f0f3,stroke:#00A9B7,stroke-width:2px,color:#05343a
+    style C    fill:#fff3d1,stroke:#D9A400,stroke-width:2px,color:#4a3600
+    style P    fill:#fff3d1,stroke:#D9A400,stroke-width:2px,color:#4a3600
+    style T    fill:#fff3d1,stroke:#D9A400,stroke-width:2px,color:#4a3600
+    style X    fill:#fff3d1,stroke:#D9A400,stroke-width:2px,color:#4a3600
+    style CAND  fill:#e8eaeb,stroke:#63666A,stroke-width:2px,color:#2b2d2f
+    style BAYES fill:#63666A,stroke:#3f4143,stroke-width:2px,color:#ffffff
+    style PANEL fill:#BA0C2F,stroke:#7A0820,stroke-width:4px,color:#ffffff
+    style DK  fill:#fadde3,stroke:#BA0C2F,stroke-width:3px,color:#5c0618
+    style CCR fill:#fdeef1,stroke:#BA0C2F,stroke-width:2px,color:#5c0618
+    style FRE fill:#fdeef1,stroke:#BA0C2F,stroke-width:2px,color:#5c0618
+
+    linkStyle 4,5,6,7,8,9,10,11 stroke:#BA0C2F,stroke-width:2.5px
 ```
 
 ---
@@ -132,6 +142,15 @@ export ACC_DATA_ROOT=/path/to/acc_data
 definition of that root for Python and R. Scripts resolve sibling files relative to their own
 location, so the repository can live anywhere.
 
+Sample identifiers throughout are **pseudonyms** (`P01`–`P25`) and do not correspond to any
+clinical, pathology or accession number.
+
+> [!NOTE]
+> **Two column names differ from the originals.** `ModelOutcome1` and `ModelOutcome2` were
+> renamed when this repository was prepared. If you are running these scripts against the
+> original `.h5ad` or trait table, rename the corresponding columns to match, or the scripts
+> will raise a `KeyError`.
+
 > [!IMPORTANT]
 > **Do not install everything into one environment.** The pipelines ran in several separate
 > conda environments — scCODA and CellPhoneDB pin conflicting dependencies. Dependencies are
@@ -149,23 +168,6 @@ location, so the repository can live anywhere.
 | To score new samples | [`07_prognostic_model/release/score_acc4.py`](07_prognostic_model/release/score_acc4.py) — the one scoring function, cohort-batch and frozen single-sample |
 | A specific number from the paper | [`07_prognostic_model/release/results_dictionary.csv`](07_prognostic_model/release/results_dictionary.csv) — every manuscript-facing value with its source file, generating script and evidence tier |
 | To know what **not** to quote | [`07_prognostic_model/release/DEPRECATED.md`](07_prognostic_model/release/DEPRECATED.md) — superseded artefacts and the wrong numbers they would produce |
-
----
-
-## Data availability
-
-No expression data, clinical data or raw sequencing output is distributed in this repository.
-It contains analysis code only.
-
-Sample identifiers throughout are **pseudonyms** (`P01`–`P25`) and do not correspond to any
-clinical, pathology or accession number. No per-patient metadata table is distributed here:
-scripts that need outcome group, survival bracket or anatomical site read `clinical_info.csv`
-from your own data tree at `$ACC_DATA_ROOT`.
-
-> [!NOTE]
-> Two sample-metadata columns were renamed from their original labels when this repository was
-> prepared: `ModelOutcome1` and `ModelOutcome2`. If you are running these scripts against the
-> original `.h5ad` or trait table, rename the corresponding columns to match.
 
 ---
 
