@@ -34,8 +34,7 @@
   </marker>
 </defs>
 <rect width="1600" height="860" rx="22" fill="#0d1117"/>
-<text x="40" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="800" fill="#e6edf3" text-anchor="start">From tumour tissue to a four-gene prognostic panel</text>
-<text x="40" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#9198a1" text-anchor="start">Head &amp; neck adenoid cystic carcinoma  ·  poor (&lt; 2 y) vs favourable (&gt; 5 y) survival  ·  numbered stages match the repository folders</text>
+<text x="40" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="38" font-weight="800" fill="#e6edf3" text-anchor="start" letter-spacing="-0.5">From tumour tissue to a four-gene prognostic panel</text>
 <rect x="30" y="110" width="230" height="730" rx="16" fill="#161b22" stroke="#30363d" stroke-width="1" filter="url(#shadow)"/>
 <text x="50" y="144" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="800" fill="#e6edf3" text-anchor="start">Patient tumours</text>
 <text x="50" y="164" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">Internal discovery cohort</text>
