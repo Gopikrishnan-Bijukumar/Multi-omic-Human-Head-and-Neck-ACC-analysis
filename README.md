@@ -46,50 +46,25 @@ Every top-level folder corresponds to a numbered section of the paper's Suppleme
 
 ## How the pieces fit together
 
-```mermaid
-flowchart TD
-    subgraph DISC["Internal discovery cohort — 25 patients, pseudonymised P01–P25"]
-        B["<b>01</b> Bulk RNA-seq<br/>20 tumours · 10 sites<br/><i>PyDESeq2 · GSEA · WGCNA · ORA</i>"]
-        S["<b>02</b> Single-cell RNA-seq<br/>24 samples<br/><i>scVI · 3-way doublet consensus</i>"]
-        C["<b>03</b> scCODA<br/><i>cell-type abundance</i>"]
-        P["<b>04</b> CellPhoneDB<br/><i>cell–cell communication</i>"]
-        T["<b>05</b> Trajectory<br/><i>CytoTRACE2 · Monocle3</i>"]
-        X["<b>06</b> Spatial<br/>4 Visium 55µm · 2 HD 16µm<br/><i>Giotto · SpatialDWLS</i>"]
-    end
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/pipeline-dark.svg">
+  <img src="docs/pipeline-light.svg" width="100%" alt="Analysis pipeline: tumours from 25 patients with favourable or poor outcome are profiled by bulk RNA-seq, single-cell RNA-seq (with scCODA, CellPhoneDB and trajectory analyses) and spatial transcriptomics; candidate genes from all three are filtered by three-level hierarchical Bayesian shrinkage into a locked four-gene panel (DSCAM, ODC1, NCAPG, CCNB2), validated in the Danish, MD Anderson CCR2020 and Frerich 2018 cohorts.">
+</picture>
 
-    S --> C
-    S --> P
-    S --> T
-    S --> X
+<details>
+<summary><b>Text version</b></summary>
 
-    B ==> CAND["<b>Candidate gene nomination</b><br/>WGCNA modules · pseudobulk DE · spatial evidence"]
-    S ==> CAND
-    X ==> CAND
+1. **Patient tumours**: internal discovery cohort of 25 patients (pseudonymised P01–P25), favourable (> 5 y) vs poor (< 2 y) survival.
+2. **Three molecular views** of the same disease:
+   - **01 Bulk RNA-seq**: 20 tumours, 10 sites. PyDESeq2 · GSEA · WGCNA · ORA.
+   - **02 Single-cell RNA-seq**: 24 samples. scVI · three-way doublet consensus · pseudobulk DE. It feeds **03 scCODA** (cell-type abundance), **04 CellPhoneDB** (cell–cell communication) and **05 Trajectory** (CytoTRACE2 · Monocle3).
+   - **06 Spatial**: 4 Visium (55 µm) and 2 Visium HD (16 µm). Giotto · SpatialDWLS.
+3. **Candidate gene nomination**: WGCNA modules, pseudobulk DE and spatial evidence.
+4. **07 Three-level hierarchical Bayesian shrinkage** (source → module → gene, ADVI).
+5. **Locked four-gene panel**: DSCAM · ODC1 · NCAPG · CCNB2.
+6. **External validation**: Danish cohort (n = 54, overall survival, C = 0.671, HR/SD 1.74; the single primary claim); CCR2020 MD Anderson (n = 54, ACC-I vs ACC-II subtype, AUC = 0.884); Frerich 2018 (n = 66, cross-platform replication, OR = 7.5).
 
-    CAND ==> BAYES["<b>07</b> Three-level hierarchical<br/>Bayesian shrinkage · ADVI<br/><i>source → module → gene</i>"]
-    BAYES ==> PANEL["<b>LOCKED FOUR-GENE PANEL</b><br/>DSCAM · ODC1 · NCAPG · CCNB2"]
-
-    PANEL ==> DK["<b>Danish cohort</b> · n = 54<br/>overall survival<br/><b>C = 0.671</b> · HR/SD 1.74<br/><i>the single primary claim</i>"]
-    PANEL --> CCR["<b>CCR2020</b> MD Anderson · n = 54<br/>ACC-I vs ACC-II subtype<br/><b>AUC = 0.884</b>"]
-    PANEL --> FRE["<b>Frerich 2018</b> · n = 66<br/>cross-platform replication<br/><b>OR = 7.5</b>"]
-
-    %% ---- UNM palette: Cherry #BA0C2F, Turquoise #00A9B7, Zia Yellow #FFC72C, Silver #63666A
-    style DISC fill:#f7f8f8,stroke:#63666A,stroke-width:2px,color:#2b2d2f
-    style B    fill:#d4f0f3,stroke:#00A9B7,stroke-width:2px,color:#05343a
-    style S    fill:#d4f0f3,stroke:#00A9B7,stroke-width:2px,color:#05343a
-    style C    fill:#fff3d1,stroke:#D9A400,stroke-width:2px,color:#4a3600
-    style P    fill:#fff3d1,stroke:#D9A400,stroke-width:2px,color:#4a3600
-    style T    fill:#fff3d1,stroke:#D9A400,stroke-width:2px,color:#4a3600
-    style X    fill:#fff3d1,stroke:#D9A400,stroke-width:2px,color:#4a3600
-    style CAND  fill:#e8eaeb,stroke:#63666A,stroke-width:2px,color:#2b2d2f
-    style BAYES fill:#63666A,stroke:#3f4143,stroke-width:2px,color:#ffffff
-    style PANEL fill:#BA0C2F,stroke:#7A0820,stroke-width:4px,color:#ffffff
-    style DK  fill:#fadde3,stroke:#BA0C2F,stroke-width:3px,color:#5c0618
-    style CCR fill:#fdeef1,stroke:#BA0C2F,stroke-width:2px,color:#5c0618
-    style FRE fill:#fdeef1,stroke:#BA0C2F,stroke-width:2px,color:#5c0618
-
-    linkStyle 4,5,6,7,8,9,10,11 stroke:#BA0C2F,stroke-width:2.5px
-```
+</details>
 
 ---
 
