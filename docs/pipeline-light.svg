@@ -26,11 +26,11 @@
   <radialGradient id="gCell" cx="0.4" cy="0.35" r="0.7">
     <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
   </radialGradient>
-  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-    <path d="M0,1 L9,5 L0,9 Z" fill="#63666A"/>
+  <marker id="arrow" viewBox="0 0 10 10" refX="0" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto">
+    <path d="M0,0.5 L10,5 L0,9.5 Z" fill="#63666A"/>
   </marker>
-  <marker id="arrowC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-    <path d="M0,1 L9,5 L0,9 Z" fill="#BA0C2F"/>
+  <marker id="arrowC" viewBox="0 0 10 10" refX="0" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto">
+    <path d="M0,0.5 L10,5 L0,9.5 Z" fill="#BA0C2F"/>
   </marker>
 </defs>
 <rect width="1600" height="880" rx="22" fill="#fbfaf7"/>
@@ -275,13 +275,13 @@
 <text x="360" y="146" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="800" fill="#1f2328" text-anchor="start">Bulk RNA-seq</text>
 <rect x="659.1" y="127" width="165" height="24" rx="12" fill="#e0f5f7"/>
 <text x="741.55" y="143.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#00A9B7" text-anchor="middle">20 tumours · 10 sites</text>
-<path d="M260,285 C282,285 274,140 296,140" fill="none" stroke="#00A9B7" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow)" opacity="0.9"/>
+<path d="M260,285 C282,285 270,140 287,140" fill="none" stroke="#00A9B7" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow)" opacity="0.9"/>
 <rect x="338" y="174" width="30" height="9" rx="3" fill="#eceae5" stroke="#9aa1a8" stroke-width="1.2"/>
 <path d="M340,182 h26 v22 l-9,26 q-4,6 -8,0 l-9,-26 z" fill="#ffffff" stroke="#9aa1a8" stroke-width="1.4"/>
 <path d="M341.5,200 h23 l-8.4,25 q-3.2,4.5 -6.3,0 z" fill="#00A9B7" opacity="0.35"/>
 <ellipse cx="353" cy="223" rx="4" ry="2.4" fill="#BA0C2F" opacity="0.85"/>
 <text x="353" y="262" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#59636e" text-anchor="middle">total RNA</text>
-<line x1="382" y1="212" x2="412" y2="212" stroke="#63666A" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="382" y1="212" x2="401.0" y2="212.0" stroke="#63666A" stroke-width="1.6" marker-end="url(#arrow)"/>
 <line x1="422" y1="252" x2="542" y2="252" stroke="#9aa1a8" stroke-width="1"/>
 <line x1="482.0" y1="170" x2="482.0" y2="252" stroke="#d0ccc4" stroke-width="1" stroke-dasharray="2 2"/>
 <circle cx="483.7" cy="251.2" r="1.5" fill="#9aa1a8" opacity="0.45"/>
@@ -429,7 +429,7 @@
 <text x="360" y="356" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="800" fill="#1f2328" text-anchor="start">Single-cell RNA-seq</text>
 <rect x="597.0" y="337" width="227" height="24" rx="12" fill="#fff4d6"/>
 <text x="710.5" y="353.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#a57c00" text-anchor="middle">24 samples · 13 good / 11 poor</text>
-<path d="M260,285 C282,285 274,350 296,350" fill="none" stroke="#FFC72C" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow)" opacity="0.9"/>
+<path d="M260,285 C282,285 270,350 287,350" fill="none" stroke="#FFC72C" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow)" opacity="0.9"/>
 <circle cx="338.7362056313355" cy="396.6869649223561" r="8" fill="#BA0C2F" opacity="0.9"/>
 <circle cx="338.7362056313355" cy="396.6869649223561" r="8" fill="url(#gCell)"/>
 <circle cx="339.9" cy="397.5" r="3.4" fill="#000" opacity="0.28"/>
@@ -452,14 +452,14 @@
 <circle cx="335.5840178417476" cy="433.3611909212322" r="8" fill="url(#gCell)"/>
 <circle cx="336.8" cy="434.2" r="3.4" fill="#000" opacity="0.28"/>
 <text x="358" y="470" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#59636e" text-anchor="middle">single cells</text>
-<line x1="400" y1="416" x2="426" y2="416" stroke="#63666A" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="400" y1="416" x2="415.0" y2="416.0" stroke="#63666A" stroke-width="1.6" marker-end="url(#arrow)"/>
 <path d="M450,394 C466,414 466,432 450,432 C434,432 434,414 450,394 Z" fill="#00A9B7" opacity="0.18" stroke="#00A9B7" stroke-width="1.4"/>
 <circle cx="447" cy="420" r="6" fill="#BA0C2F" opacity="0.9"/>
 <circle cx="447" cy="420" r="6" fill="url(#gCell)"/>
 <circle cx="447.9" cy="420.6" r="2.5" fill="#000" opacity="0.28"/>
 <circle cx="455" cy="423" r="3.6" fill="#FFC72C" stroke="#a57c00" stroke-width="0.8"/>
 <text x="450" y="470" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#59636e" text-anchor="middle">barcoded droplet</text>
-<line x1="476" y1="416" x2="502" y2="416" stroke="#63666A" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="476" y1="416" x2="491.0" y2="416.0" stroke="#63666A" stroke-width="1.6" marker-end="url(#arrow)"/>
 <circle cx="530.1" cy="395.5" r="1.9" fill="#00A9B7" opacity="0.85"/>
 <circle cx="545.6" cy="387.8" r="1.9" fill="#00A9B7" opacity="0.85"/>
 <circle cx="538.8" cy="388.0" r="1.9" fill="#00A9B7" opacity="0.85"/>
@@ -638,7 +638,7 @@
 <circle cx="824.0" cy="554.5" r="2.2" fill="#9aa1a8" opacity="0.6"/>
 <text x="692" y="586" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#00A9B7" text-anchor="start">stem-like</text>
 <text x="824" y="586" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#BA0C2F" text-anchor="end">differentiated</text>
-<path d="M570,476 V486" stroke="#FFC72C" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M570,476 V479" stroke="#FFC72C" stroke-width="1.6" marker-end="url(#arrow)"/>
 <rect x="300" y="650" width="540" height="190" rx="16" fill="#ffffff" stroke="#e3e1dc" stroke-width="1" filter="url(#shadow)"/>
 <rect x="300" y="650" width="6" height="190" fill="#63666A" rx="3"/>
 <circle cx="336" cy="680" r="15" fill="#63666A"/>
@@ -646,7 +646,7 @@
 <text x="360" y="686" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="800" fill="#1f2328" text-anchor="start">Spatial transcriptomics</text>
 <rect x="652.2" y="667" width="172" height="24" rx="12" fill="#eeeff0"/>
 <text x="738.1" y="683.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#63666A" text-anchor="middle">4 Visium · 2 Visium HD</text>
-<path d="M260,285 C282,285 274,680 296,680" fill="none" stroke="#63666A" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow)" opacity="0.9"/>
+<path d="M260,285 C282,285 270,680 287,680" fill="none" stroke="#63666A" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow)" opacity="0.9"/>
 <clipPath id="clip21"><path d="M459.8,762.0 453.5,772.7 442.4,780.7 432.4,787.1 424.8,794.4 416.3,802.5 404.3,808.5 390.0,810.3 375.6,808.7 361.9,805.3 349.1,800.0 339.7,791.7 336.0,781.3 336.3,771.1 335.8,762.0 332.6,752.3 330.6,740.8 335.4,729.7 347.5,722.4 362.5,719.6 376.7,718.8 390.0,718.3 403.2,719.0 415.7,722.4 426.4,728.1 436.7,734.4 447.7,741.4 457.2,750.6Z"/></clipPath>
 <path d="M459.8,762.0 453.5,772.7 442.4,780.7 432.4,787.1 424.8,794.4 416.3,802.5 404.3,808.5 390.0,810.3 375.6,808.7 361.9,805.3 349.1,800.0 339.7,791.7 336.0,781.3 336.3,771.1 335.8,762.0 332.6,752.3 330.6,740.8 335.4,729.7 347.5,722.4 362.5,719.6 376.7,718.8 390.0,718.3 403.2,719.0 415.7,722.4 426.4,728.1 436.7,734.4 447.7,741.4 457.2,750.6Z" fill="#f6cfdc" stroke="#d98aa8" stroke-width="1.5" stroke-linejoin="round"/>
 <g clip-path="url(#clip21)">
@@ -1503,66 +1503,53 @@
 <text x="678.64" y="814.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#3b4148" text-anchor="middle">Giotto</text>
 <rect x="711.28" y="800" width="82.7" height="21.5" rx="10.75" fill="#f3f1ec"/>
 <text x="752.62" y="814.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#3b4148" text-anchor="middle">SpatialDWLS</text>
-<rect x="890" y="290" width="200" height="380" rx="16" fill="#ffffff" stroke="#e3e1dc" stroke-width="1" filter="url(#shadow)"/>
-<text x="990.0" y="324" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="800" fill="#1f2328" text-anchor="middle">Candidate genes</text>
-<text x="990.0" y="343" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#59636e" text-anchor="middle">evidence from all three views</text>
-<line x1="918.8" y1="423.6" x2="918.8" y2="410.0" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
-<line x1="918.8" y1="410.0" x2="918.8" y2="396.4" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
-<line x1="925.6" y1="433.2" x2="925.6" y2="410.0" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
-<line x1="925.6" y1="410.0" x2="925.6" y2="386.8" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
-<line x1="932.5" y1="435.9" x2="932.5" y2="410.0" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
-<line x1="932.5" y1="410.0" x2="932.5" y2="384.1" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
-<line x1="940.3" y1="429.8" x2="940.3" y2="410.0" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
-<line x1="940.3" y1="410.0" x2="940.3" y2="390.2" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
-<line x1="947.1" y1="418.0" x2="947.1" y2="410.0" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
-<line x1="947.1" y1="410.0" x2="947.1" y2="402.0" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
-<line x1="953.9" y1="403.9" x2="953.9" y2="410.0" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
-<line x1="953.9" y1="410.0" x2="953.9" y2="416.1" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
-<line x1="960.8" y1="391.6" x2="960.8" y2="410.0" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
-<line x1="960.8" y1="410.0" x2="960.8" y2="428.4" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
-<line x1="968.5" y1="384.3" x2="968.5" y2="410.0" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
-<line x1="968.5" y1="410.0" x2="968.5" y2="435.7" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
-<line x1="975.4" y1="386.0" x2="975.4" y2="410.0" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
-<line x1="975.4" y1="410.0" x2="975.4" y2="434.0" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
-<line x1="982.2" y1="394.7" x2="982.2" y2="410.0" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
-<line x1="982.2" y1="410.0" x2="982.2" y2="425.3" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
-<line x1="996.8" y1="423.6" x2="996.8" y2="410.0" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
-<line x1="996.8" y1="410.0" x2="996.8" y2="396.4" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
-<line x1="1003.6" y1="433.2" x2="1003.6" y2="410.0" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
-<line x1="1003.6" y1="410.0" x2="1003.6" y2="386.8" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
-<line x1="1010.5" y1="435.9" x2="1010.5" y2="410.0" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
-<line x1="1010.5" y1="410.0" x2="1010.5" y2="384.1" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
-<line x1="1018.3" y1="429.8" x2="1018.3" y2="410.0" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
-<line x1="1018.3" y1="410.0" x2="1018.3" y2="390.2" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
-<line x1="1025.1" y1="418.0" x2="1025.1" y2="410.0" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
-<line x1="1025.1" y1="410.0" x2="1025.1" y2="402.0" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
-<line x1="1031.9" y1="403.9" x2="1031.9" y2="410.0" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
-<line x1="1031.9" y1="410.0" x2="1031.9" y2="416.1" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
-<line x1="1038.8" y1="391.6" x2="1038.8" y2="410.0" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
-<line x1="1038.8" y1="410.0" x2="1038.8" y2="428.4" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
-<line x1="1046.5" y1="384.3" x2="1046.5" y2="410.0" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
-<line x1="1046.5" y1="410.0" x2="1046.5" y2="435.7" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
-<line x1="1053.4" y1="386.0" x2="1053.4" y2="410.0" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
-<line x1="1053.4" y1="410.0" x2="1053.4" y2="434.0" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
-<line x1="1060.2" y1="394.7" x2="1060.2" y2="410.0" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
-<line x1="1060.2" y1="410.0" x2="1060.2" y2="425.3" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
-<path d="M912.0,410.0 L913.0,412.0 L914.0,414.1 L914.9,416.1 L915.9,418.0 L916.9,419.9 L917.9,421.8 L918.8,423.6 L919.8,425.3 L920.8,426.9 L921.8,428.4 L922.7,429.8 L923.7,431.0 L924.7,432.2 L925.6,433.2 L926.6,434.0 L927.6,434.7 L928.6,435.3 L929.5,435.7 L930.5,435.9 L931.5,436.0 L932.5,435.9 L933.5,435.7 L934.4,435.3 L935.4,434.7 L936.4,434.0 L937.4,433.2 L938.3,432.2 L939.3,431.0 L940.3,429.8 L941.2,428.4 L942.2,426.9 L943.2,425.3 L944.2,423.6 L945.1,421.8 L946.1,419.9 L947.1,418.0 L948.1,416.1 L949.0,414.1 L950.0,412.0 L951.0,410.0 L952.0,408.0 L953.0,405.9 L953.9,403.9 L954.9,402.0 L955.9,400.1 L956.9,398.2 L957.8,396.4 L958.8,394.7 L959.8,393.1 L960.8,391.6 L961.7,390.2 L962.7,389.0 L963.7,387.8 L964.6,386.8 L965.6,386.0 L966.6,385.3 L967.6,384.7 L968.5,384.3 L969.5,384.1 L970.5,384.0 L971.5,384.1 L972.5,384.3 L973.4,384.7 L974.4,385.3 L975.4,386.0 L976.4,386.8 L977.3,387.8 L978.3,389.0 L979.3,390.2 L980.2,391.6 L981.2,393.1 L982.2,394.7 L983.2,396.4 L984.1,398.2 L985.1,400.1 L986.1,402.0 L987.1,403.9 L988.0,405.9 L989.0,408.0 L990.0,410.0 L991.0,412.0 L992.0,414.1 L992.9,416.1 L993.9,418.0 L994.9,419.9 L995.9,421.8 L996.8,423.6 L997.8,425.3 L998.8,426.9 L999.8,428.4 L1000.7,429.8 L1001.7,431.0 L1002.7,432.2 L1003.6,433.2 L1004.6,434.0 L1005.6,434.7 L1006.6,435.3 L1007.5,435.7 L1008.5,435.9 L1009.5,436.0 L1010.5,435.9 L1011.5,435.7 L1012.4,435.3 L1013.4,434.7 L1014.4,434.0 L1015.4,433.2 L1016.3,432.2 L1017.3,431.0 L1018.3,429.8 L1019.2,428.4 L1020.2,426.9 L1021.2,425.3 L1022.2,423.6 L1023.1,421.8 L1024.1,419.9 L1025.1,418.0 L1026.1,416.1 L1027.0,414.1 L1028.0,412.0 L1029.0,410.0 L1030.0,408.0 L1031.0,405.9 L1031.9,403.9 L1032.9,402.0 L1033.9,400.1 L1034.8,398.2 L1035.8,396.4 L1036.8,394.7 L1037.8,393.1 L1038.8,391.6 L1039.7,390.2 L1040.7,389.0 L1041.7,387.8 L1042.7,386.8 L1043.6,386.0 L1044.6,385.3 L1045.6,384.7 L1046.5,384.3 L1047.5,384.1 L1048.5,384.0 L1049.5,384.1 L1050.5,384.3 L1051.4,384.7 L1052.4,385.3 L1053.4,386.0 L1054.3,386.8 L1055.3,387.8 L1056.3,389.0 L1057.3,390.2 L1058.2,391.6 L1059.2,393.1 L1060.2,394.7 L1061.2,396.4 L1062.2,398.2 L1063.1,400.1 L1064.1,402.0 L1065.1,403.9 L1066.0,405.9 L1067.0,408.0 L1068.0,410.0" fill="none" stroke="#1f2328" stroke-width="3.2" stroke-linecap="round" opacity="0.85"/>
-<path d="M912.0,410.0 L913.0,408.0 L914.0,405.9 L914.9,403.9 L915.9,402.0 L916.9,400.1 L917.9,398.2 L918.8,396.4 L919.8,394.7 L920.8,393.1 L921.8,391.6 L922.7,390.2 L923.7,389.0 L924.7,387.8 L925.6,386.8 L926.6,386.0 L927.6,385.3 L928.6,384.7 L929.5,384.3 L930.5,384.1 L931.5,384.0 L932.5,384.1 L933.5,384.3 L934.4,384.7 L935.4,385.3 L936.4,386.0 L937.4,386.8 L938.3,387.8 L939.3,389.0 L940.3,390.2 L941.2,391.6 L942.2,393.1 L943.2,394.7 L944.2,396.4 L945.1,398.2 L946.1,400.1 L947.1,402.0 L948.1,403.9 L949.0,405.9 L950.0,408.0 L951.0,410.0 L952.0,412.0 L953.0,414.1 L953.9,416.1 L954.9,418.0 L955.9,419.9 L956.9,421.8 L957.8,423.6 L958.8,425.3 L959.8,426.9 L960.8,428.4 L961.7,429.8 L962.7,431.0 L963.7,432.2 L964.6,433.2 L965.6,434.0 L966.6,434.7 L967.6,435.3 L968.5,435.7 L969.5,435.9 L970.5,436.0 L971.5,435.9 L972.5,435.7 L973.4,435.3 L974.4,434.7 L975.4,434.0 L976.4,433.2 L977.3,432.2 L978.3,431.0 L979.3,429.8 L980.2,428.4 L981.2,426.9 L982.2,425.3 L983.2,423.6 L984.1,421.8 L985.1,419.9 L986.1,418.0 L987.1,416.1 L988.0,414.1 L989.0,412.0 L990.0,410.0 L991.0,408.0 L992.0,405.9 L992.9,403.9 L993.9,402.0 L994.9,400.1 L995.9,398.2 L996.8,396.4 L997.8,394.7 L998.8,393.1 L999.8,391.6 L1000.7,390.2 L1001.7,389.0 L1002.7,387.8 L1003.6,386.8 L1004.6,386.0 L1005.6,385.3 L1006.6,384.7 L1007.5,384.3 L1008.5,384.1 L1009.5,384.0 L1010.5,384.1 L1011.5,384.3 L1012.4,384.7 L1013.4,385.3 L1014.4,386.0 L1015.4,386.8 L1016.3,387.8 L1017.3,389.0 L1018.3,390.2 L1019.2,391.6 L1020.2,393.1 L1021.2,394.7 L1022.2,396.4 L1023.1,398.2 L1024.1,400.1 L1025.1,402.0 L1026.1,403.9 L1027.0,405.9 L1028.0,408.0 L1029.0,410.0 L1030.0,412.0 L1031.0,414.1 L1031.9,416.1 L1032.9,418.0 L1033.9,419.9 L1034.8,421.8 L1035.8,423.6 L1036.8,425.3 L1037.8,426.9 L1038.8,428.4 L1039.7,429.8 L1040.7,431.0 L1041.7,432.2 L1042.7,433.2 L1043.6,434.0 L1044.6,434.7 L1045.6,435.3 L1046.5,435.7 L1047.5,435.9 L1048.5,436.0 L1049.5,435.9 L1050.5,435.7 L1051.4,435.3 L1052.4,434.7 L1053.4,434.0 L1054.3,433.2 L1055.3,432.2 L1056.3,431.0 L1057.3,429.8 L1058.2,428.4 L1059.2,426.9 L1060.2,425.3 L1061.2,423.6 L1062.2,421.8 L1063.1,419.9 L1064.1,418.0 L1065.1,416.1 L1066.0,414.1 L1067.0,412.0 L1068.0,410.0" fill="none" stroke="#63666A" stroke-width="3.2" stroke-linecap="round" opacity="0.85"/>
-<rect x="908" y="480" width="164" height="42" rx="10" fill="#eceae5"/>
-<rect x="908" y="480" width="5" height="42" rx="2.5" fill="#00A9B7"/>
-<text x="924" y="498" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#1f2328" text-anchor="start">WGCNA modules</text>
-<text x="924" y="514" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#59636e" text-anchor="start">bulk</text>
-<rect x="908" y="532" width="164" height="42" rx="10" fill="#eceae5"/>
-<rect x="908" y="532" width="5" height="42" rx="2.5" fill="#FFC72C"/>
-<text x="924" y="550" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#1f2328" text-anchor="start">pseudobulk DE</text>
-<text x="924" y="566" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#59636e" text-anchor="start">single cell</text>
-<rect x="908" y="584" width="164" height="42" rx="10" fill="#eceae5"/>
-<rect x="908" y="584" width="5" height="42" rx="2.5" fill="#63666A"/>
-<text x="924" y="602" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#1f2328" text-anchor="start">spatial evidence</text>
-<text x="924" y="618" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#59636e" text-anchor="start">Visium / HD</text>
-<path d="M840,205 C863.0,205 863.0,380 886,380" fill="none" stroke="url(#gFlowT)" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrow)"/>
-<path d="M840,420 C863.0,420 863.0,480 886,480" fill="none" stroke="url(#gFlowZ)" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrow)"/>
-<path d="M840,745 C863.0,745 863.0,580 886,580" fill="none" stroke="url(#gFlowT)" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="890" y="365" width="200" height="220" rx="16" fill="#ffffff" stroke="#e3e1dc" stroke-width="1" filter="url(#shadow)"/>
+<text x="990.0" y="405" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="800" fill="#1f2328" text-anchor="middle">Candidate genes</text>
+<line x1="918.8" y1="506.7" x2="918.8" y2="490.0" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
+<line x1="918.8" y1="490.0" x2="918.8" y2="473.3" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
+<line x1="925.6" y1="518.5" x2="925.6" y2="490.0" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
+<line x1="925.6" y1="490.0" x2="925.6" y2="461.5" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
+<line x1="932.5" y1="521.9" x2="932.5" y2="490.0" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
+<line x1="932.5" y1="490.0" x2="932.5" y2="458.1" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
+<line x1="940.3" y1="514.3" x2="940.3" y2="490.0" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
+<line x1="940.3" y1="490.0" x2="940.3" y2="465.7" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
+<line x1="947.1" y1="499.9" x2="947.1" y2="490.0" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
+<line x1="947.1" y1="490.0" x2="947.1" y2="480.1" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
+<line x1="953.9" y1="482.5" x2="953.9" y2="490.0" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
+<line x1="953.9" y1="490.0" x2="953.9" y2="497.5" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
+<line x1="960.8" y1="467.4" x2="960.8" y2="490.0" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
+<line x1="960.8" y1="490.0" x2="960.8" y2="512.6" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
+<line x1="968.5" y1="458.4" x2="968.5" y2="490.0" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
+<line x1="968.5" y1="490.0" x2="968.5" y2="521.6" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
+<line x1="975.4" y1="460.4" x2="975.4" y2="490.0" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
+<line x1="975.4" y1="490.0" x2="975.4" y2="519.6" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
+<line x1="982.2" y1="471.2" x2="982.2" y2="490.0" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
+<line x1="982.2" y1="490.0" x2="982.2" y2="508.8" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
+<line x1="996.8" y1="506.7" x2="996.8" y2="490.0" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
+<line x1="996.8" y1="490.0" x2="996.8" y2="473.3" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
+<line x1="1003.6" y1="518.5" x2="1003.6" y2="490.0" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
+<line x1="1003.6" y1="490.0" x2="1003.6" y2="461.5" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1010.5" y1="521.9" x2="1010.5" y2="490.0" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
+<line x1="1010.5" y1="490.0" x2="1010.5" y2="458.1" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
+<line x1="1018.3" y1="514.3" x2="1018.3" y2="490.0" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1018.3" y1="490.0" x2="1018.3" y2="465.7" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
+<line x1="1025.1" y1="499.9" x2="1025.1" y2="490.0" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
+<line x1="1025.1" y1="490.0" x2="1025.1" y2="480.1" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
+<line x1="1031.9" y1="482.5" x2="1031.9" y2="490.0" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
+<line x1="1031.9" y1="490.0" x2="1031.9" y2="497.5" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1038.8" y1="467.4" x2="1038.8" y2="490.0" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
+<line x1="1038.8" y1="490.0" x2="1038.8" y2="512.6" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
+<line x1="1046.5" y1="458.4" x2="1046.5" y2="490.0" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1046.5" y1="490.0" x2="1046.5" y2="521.6" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
+<line x1="1053.4" y1="460.4" x2="1053.4" y2="490.0" stroke="#00A9B7" stroke-width="3" stroke-linecap="round"/>
+<line x1="1053.4" y1="490.0" x2="1053.4" y2="519.6" stroke="#FFC72C" stroke-width="3" stroke-linecap="round"/>
+<line x1="1060.2" y1="471.2" x2="1060.2" y2="490.0" stroke="#BA0C2F" stroke-width="3" stroke-linecap="round"/>
+<line x1="1060.2" y1="490.0" x2="1060.2" y2="508.8" stroke="#63666A" stroke-width="3" stroke-linecap="round"/>
+<path d="M912.0,490.0 L913.0,492.5 L914.0,495.0 L914.9,497.5 L915.9,499.9 L916.9,502.2 L917.9,504.5 L918.8,506.7 L919.8,508.8 L920.8,510.8 L921.8,512.6 L922.7,514.3 L923.7,515.9 L924.7,517.3 L925.6,518.5 L926.6,519.6 L927.6,520.4 L928.6,521.1 L929.5,521.6 L930.5,521.9 L931.5,522.0 L932.5,521.9 L933.5,521.6 L934.4,521.1 L935.4,520.4 L936.4,519.6 L937.4,518.5 L938.3,517.3 L939.3,515.9 L940.3,514.3 L941.2,512.6 L942.2,510.8 L943.2,508.8 L944.2,506.7 L945.1,504.5 L946.1,502.2 L947.1,499.9 L948.1,497.5 L949.0,495.0 L950.0,492.5 L951.0,490.0 L952.0,487.5 L953.0,485.0 L953.9,482.5 L954.9,480.1 L955.9,477.8 L956.9,475.5 L957.8,473.3 L958.8,471.2 L959.8,469.2 L960.8,467.4 L961.7,465.7 L962.7,464.1 L963.7,462.7 L964.6,461.5 L965.6,460.4 L966.6,459.6 L967.6,458.9 L968.5,458.4 L969.5,458.1 L970.5,458.0 L971.5,458.1 L972.5,458.4 L973.4,458.9 L974.4,459.6 L975.4,460.4 L976.4,461.5 L977.3,462.7 L978.3,464.1 L979.3,465.7 L980.2,467.4 L981.2,469.2 L982.2,471.2 L983.2,473.3 L984.1,475.5 L985.1,477.8 L986.1,480.1 L987.1,482.5 L988.0,485.0 L989.0,487.5 L990.0,490.0 L991.0,492.5 L992.0,495.0 L992.9,497.5 L993.9,499.9 L994.9,502.2 L995.9,504.5 L996.8,506.7 L997.8,508.8 L998.8,510.8 L999.8,512.6 L1000.7,514.3 L1001.7,515.9 L1002.7,517.3 L1003.6,518.5 L1004.6,519.6 L1005.6,520.4 L1006.6,521.1 L1007.5,521.6 L1008.5,521.9 L1009.5,522.0 L1010.5,521.9 L1011.5,521.6 L1012.4,521.1 L1013.4,520.4 L1014.4,519.6 L1015.4,518.5 L1016.3,517.3 L1017.3,515.9 L1018.3,514.3 L1019.2,512.6 L1020.2,510.8 L1021.2,508.8 L1022.2,506.7 L1023.1,504.5 L1024.1,502.2 L1025.1,499.9 L1026.1,497.5 L1027.0,495.0 L1028.0,492.5 L1029.0,490.0 L1030.0,487.5 L1031.0,485.0 L1031.9,482.5 L1032.9,480.1 L1033.9,477.8 L1034.8,475.5 L1035.8,473.3 L1036.8,471.2 L1037.8,469.2 L1038.8,467.4 L1039.7,465.7 L1040.7,464.1 L1041.7,462.7 L1042.7,461.5 L1043.6,460.4 L1044.6,459.6 L1045.6,458.9 L1046.5,458.4 L1047.5,458.1 L1048.5,458.0 L1049.5,458.1 L1050.5,458.4 L1051.4,458.9 L1052.4,459.6 L1053.4,460.4 L1054.3,461.5 L1055.3,462.7 L1056.3,464.1 L1057.3,465.7 L1058.2,467.4 L1059.2,469.2 L1060.2,471.2 L1061.2,473.3 L1062.2,475.5 L1063.1,477.8 L1064.1,480.1 L1065.1,482.5 L1066.0,485.0 L1067.0,487.5 L1068.0,490.0" fill="none" stroke="#1f2328" stroke-width="3.2" stroke-linecap="round" opacity="0.85"/>
+<path d="M912.0,490.0 L913.0,487.5 L914.0,485.0 L914.9,482.5 L915.9,480.1 L916.9,477.8 L917.9,475.5 L918.8,473.3 L919.8,471.2 L920.8,469.2 L921.8,467.4 L922.7,465.7 L923.7,464.1 L924.7,462.7 L925.6,461.5 L926.6,460.4 L927.6,459.6 L928.6,458.9 L929.5,458.4 L930.5,458.1 L931.5,458.0 L932.5,458.1 L933.5,458.4 L934.4,458.9 L935.4,459.6 L936.4,460.4 L937.4,461.5 L938.3,462.7 L939.3,464.1 L940.3,465.7 L941.2,467.4 L942.2,469.2 L943.2,471.2 L944.2,473.3 L945.1,475.5 L946.1,477.8 L947.1,480.1 L948.1,482.5 L949.0,485.0 L950.0,487.5 L951.0,490.0 L952.0,492.5 L953.0,495.0 L953.9,497.5 L954.9,499.9 L955.9,502.2 L956.9,504.5 L957.8,506.7 L958.8,508.8 L959.8,510.8 L960.8,512.6 L961.7,514.3 L962.7,515.9 L963.7,517.3 L964.6,518.5 L965.6,519.6 L966.6,520.4 L967.6,521.1 L968.5,521.6 L969.5,521.9 L970.5,522.0 L971.5,521.9 L972.5,521.6 L973.4,521.1 L974.4,520.4 L975.4,519.6 L976.4,518.5 L977.3,517.3 L978.3,515.9 L979.3,514.3 L980.2,512.6 L981.2,510.8 L982.2,508.8 L983.2,506.7 L984.1,504.5 L985.1,502.2 L986.1,499.9 L987.1,497.5 L988.0,495.0 L989.0,492.5 L990.0,490.0 L991.0,487.5 L992.0,485.0 L992.9,482.5 L993.9,480.1 L994.9,477.8 L995.9,475.5 L996.8,473.3 L997.8,471.2 L998.8,469.2 L999.8,467.4 L1000.7,465.7 L1001.7,464.1 L1002.7,462.7 L1003.6,461.5 L1004.6,460.4 L1005.6,459.6 L1006.6,458.9 L1007.5,458.4 L1008.5,458.1 L1009.5,458.0 L1010.5,458.1 L1011.5,458.4 L1012.4,458.9 L1013.4,459.6 L1014.4,460.4 L1015.4,461.5 L1016.3,462.7 L1017.3,464.1 L1018.3,465.7 L1019.2,467.4 L1020.2,469.2 L1021.2,471.2 L1022.2,473.3 L1023.1,475.5 L1024.1,477.8 L1025.1,480.1 L1026.1,482.5 L1027.0,485.0 L1028.0,487.5 L1029.0,490.0 L1030.0,492.5 L1031.0,495.0 L1031.9,497.5 L1032.9,499.9 L1033.9,502.2 L1034.8,504.5 L1035.8,506.7 L1036.8,508.8 L1037.8,510.8 L1038.8,512.6 L1039.7,514.3 L1040.7,515.9 L1041.7,517.3 L1042.7,518.5 L1043.6,519.6 L1044.6,520.4 L1045.6,521.1 L1046.5,521.6 L1047.5,521.9 L1048.5,522.0 L1049.5,521.9 L1050.5,521.6 L1051.4,521.1 L1052.4,520.4 L1053.4,519.6 L1054.3,518.5 L1055.3,517.3 L1056.3,515.9 L1057.3,514.3 L1058.2,512.6 L1059.2,510.8 L1060.2,508.8 L1061.2,506.7 L1062.2,504.5 L1063.1,502.2 L1064.1,499.9 L1065.1,497.5 L1066.0,495.0 L1067.0,492.5 L1068.0,490.0" fill="none" stroke="#63666A" stroke-width="3.2" stroke-linecap="round" opacity="0.85"/>
+<path d="M840,205 C858.5,205 858.5,435 877,435" fill="none" stroke="url(#gFlowT)" stroke-width="3.5" stroke-linecap="butt" marker-end="url(#arrow)"/>
+<path d="M840,420 C858.5,420 858.5,490 877,490" fill="none" stroke="url(#gFlowZ)" stroke-width="3.5" stroke-linecap="butt" marker-end="url(#arrow)"/>
+<path d="M840,745 C858.5,745 858.5,545 877,545" fill="none" stroke="url(#gFlowT)" stroke-width="3.5" stroke-linecap="butt" marker-end="url(#arrow)"/>
 <rect x="1130" y="110" width="220" height="370" rx="16" fill="#ffffff" stroke="#e3e1dc" stroke-width="1" filter="url(#shadow)"/>
 <circle cx="1160" cy="140" r="15" fill="#63666A"/>
 <text x="1160" y="144.5" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="800" fill="#ffffff" text-anchor="middle">07</text>
@@ -1639,7 +1626,7 @@
 <circle cx="1305.2" cy="344.4" r="2.6" fill="#9aa1a8" opacity="0.35"/>
 <circle cx="1299.3" cy="324.4" r="2.6" fill="#9aa1a8" opacity="0.35"/>
 <text x="1240.0" y="462" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5" font-weight="400" fill="#59636e" text-anchor="middle">source → module → gene</text>
-<path d="M1090,410 C1108.0,410 1108.0,300 1126,300" fill="none" stroke="url(#gFlowC)" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowC)"/>
+<path d="M1090,490 C1103.5,490 1103.5,300 1117,300" fill="none" stroke="url(#gFlowC)" stroke-width="3.5" stroke-linecap="butt" marker-end="url(#arrowC)"/>
 <rect x="1130" y="520" width="220" height="320" rx="18" fill="url(#gCherry)" filter="url(#shadow)"/>
 <path d="M1153,550 v-6 a7,7 0 0 1 14,0 v6" fill="none" stroke="#fff" stroke-width="2.4"/>
 <rect x="1150" y="550" width="20" height="15" rx="3" fill="#fff"/>
@@ -1657,7 +1644,7 @@
 <text x="1240.0" y="762" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#fff" text-anchor="middle">rank-inverse-normal expression</text>
 <line x1="1154" y1="782" x2="1326" y2="782" stroke="#ffffff" stroke-opacity="0.35"/>
 <text x="1240.0" y="812" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">higher score  →  worse prognosis</text>
-<line x1="1240.0" y1="484" x2="1240.0" y2="514" stroke="#BA0C2F" stroke-width="2.4" marker-end="url(#arrowC)"/>
+<line x1="1240.0" y1="482" x2="1240.0" y2="507.0" stroke="#BA0C2F" stroke-width="2.4" marker-end="url(#arrowC)"/>
 <rect x="1380" y="110" width="190" height="240" rx="16" fill="#ffffff" stroke="#BA0C2F" stroke-width="2.5" filter="url(#shadow)"/>
 <rect x="1484" y="99" width="76" height="22" rx="11" fill="#BA0C2F"/>
 <text x="1522" y="114" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="800" fill="#fff" text-anchor="middle" letter-spacing="1.2">PRIMARY</text>
@@ -1671,7 +1658,7 @@
 <text x="1475.0" y="292" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#59636e" text-anchor="middle">months → 60</text>
 <text x="1396" y="312" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="800" fill="#BA0C2F" text-anchor="start">C = 0.671</text>
 <text x="1396" y="332" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#59636e" text-anchor="start">HR / SD 1.74  ·  p = 0.017</text>
-<path d="M1350,680.0 C1366,680.0 1362,230.0 1376,230.0" fill="none" stroke="#BA0C2F" stroke-width="3" marker-end="url(#arrowC)"/>
+<path d="M1350,680.0 C1366,680.0 1350,230.0 1367,230.0" fill="none" stroke="#BA0C2F" stroke-width="3" marker-end="url(#arrowC)"/>
 <rect x="1380" y="366" width="190" height="200" rx="16" fill="#ffffff" stroke="#e3e1dc" stroke-width="1" filter="url(#shadow)"/>
 <text x="1396" y="396" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#1f2328" text-anchor="start">MD Anderson CCR2020</text>
 <text x="1396" y="413" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#59636e" text-anchor="start">n = 54 · ACC-I vs ACC-II</text>
@@ -1680,7 +1667,7 @@
 <path d="M1402,504 C1406,441.6 1438.5,430 1548,426" fill="#BA0C2F" fill-opacity="0.12" stroke="#BA0C2F" stroke-width="2.4"/>
 <text x="1396" y="528" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="800" fill="#BA0C2F" text-anchor="start">AUC = 0.884</text>
 <text x="1396" y="548" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#59636e" text-anchor="start">molecular subtype</text>
-<path d="M1350,680.0 C1366,680.0 1362,466.0 1376,466.0" fill="none" stroke="#BA0C2F" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arrowC)"/>
+<path d="M1350,680.0 C1366,680.0 1350,466.0 1367,466.0" fill="none" stroke="#BA0C2F" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arrowC)"/>
 <rect x="1380" y="582" width="190" height="186" rx="16" fill="#ffffff" stroke="#e3e1dc" stroke-width="1" filter="url(#shadow)"/>
 <text x="1396" y="612" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#1f2328" text-anchor="start">Frerich 2018</text>
 <text x="1396" y="629" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#59636e" text-anchor="start">n = 66 · cross-platform</text>
@@ -1692,7 +1679,7 @@
 <text x="1498.36" y="660.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#59636e" text-anchor="middle">odds ratio</text>
 <text x="1396" y="730" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="800" fill="#BA0C2F" text-anchor="start">OR = 7.5</text>
 <text x="1396" y="750" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#59636e" text-anchor="start">subtype replication</text>
-<path d="M1350,680.0 C1366,680.0 1362,675.0 1376,675.0" fill="none" stroke="#BA0C2F" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arrowC)"/>
+<path d="M1350,680.0 C1366,680.0 1350,675.0 1367,675.0" fill="none" stroke="#BA0C2F" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arrowC)"/>
 <rect x="1380" y="784" width="190" height="56" rx="12" fill="#fbe4e9"/>
 <text x="1475.0" y="809" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#BA0C2F" text-anchor="middle">External cohorts never</text>
 <text x="1475.0" y="826" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#BA0C2F" text-anchor="middle">entered any fit</text>

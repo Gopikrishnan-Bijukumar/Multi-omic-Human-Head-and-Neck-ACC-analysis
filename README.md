@@ -63,7 +63,7 @@ Every top-level folder corresponds to a numbered section of the paper's Suppleme
    - **01 Bulk RNA-seq**: 20 tumours, 10 sites. PyDESeq2 · GSEA · WGCNA · ORA.
    - **02 Single-cell RNA-seq**: 24 samples. scVI · three-way doublet consensus · pseudobulk DE. It feeds **03 scCODA** (cell-type abundance), **04 CellPhoneDB** (cell–cell communication) and **05 Trajectory** (CytoTRACE2 · Monocle3).
    - **06 Spatial**: 4 Visium (55 µm) and 2 Visium HD (16 µm). Giotto · SpatialDWLS.
-3. **Candidate gene nomination**: WGCNA modules, pseudobulk DE and spatial evidence.
+3. **Candidate genes** pooled from all three views.
 4. **07 Three-level hierarchical Bayesian shrinkage** (source → module → gene, ADVI).
 5. **Locked four-gene panel**: DSCAM · ODC1 · NCAPG · CCNB2.
 6. **External validation**: Danish cohort (n = 54, overall survival, C = 0.671, HR/SD 1.74; the single primary claim); CCR2020 MD Anderson (n = 54, ACC-I vs ACC-II subtype, AUC = 0.884); Frerich 2018 (n = 66, cross-platform replication, OR = 7.5).
