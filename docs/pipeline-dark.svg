@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 880" width="1600" height="880" role="img" aria-labelledby="ttl desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 860" width="1600" height="860" role="img" aria-labelledby="ttl desc">
 <title id="ttl">Multi-omic analysis pipeline for head and neck adenoid cystic carcinoma</title>
 <desc id="desc">Patient tumours are profiled by bulk RNA-seq, single-cell RNA-seq and spatial transcriptomics; candidate genes from all three are filtered by hierarchical Bayesian shrinkage into a locked four-gene panel (DSCAM, ODC1, NCAPG, CCNB2), validated in three external cohorts.</desc>
 <defs>
@@ -33,16 +33,9 @@
     <path d="M0,0.5 L10,5 L0,9.5 Z" fill="#BA0C2F"/>
   </marker>
 </defs>
-<rect width="1600" height="880" rx="22" fill="#0d1117"/>
+<rect width="1600" height="860" rx="22" fill="#0d1117"/>
 <text x="40" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="800" fill="#e6edf3" text-anchor="start">From tumour tissue to a four-gene prognostic panel</text>
 <text x="40" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#9198a1" text-anchor="start">Head &amp; neck adenoid cystic carcinoma  ·  poor (&lt; 2 y) vs favourable (&gt; 5 y) survival  ·  numbered stages match the repository folders</text>
-<text x="1040" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="800" fill="#00A9B7" text-anchor="start" letter-spacing="2">DISCOVER</text>
-<text x="1125.6" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#6e7681" text-anchor="start">›</text>
-<text x="1147.6" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="800" fill="#63666A" text-anchor="start" letter-spacing="2">INTEGRATE</text>
-<text x="1242.3999999999999" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#6e7681" text-anchor="start">›</text>
-<text x="1264.3999999999999" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="800" fill="#BA0C2F" text-anchor="start" letter-spacing="2">LOCK</text>
-<text x="1313.1999999999998" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#6e7681" text-anchor="start">›</text>
-<text x="1335.1999999999998" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="800" fill="#BA0C2F" text-anchor="start" letter-spacing="2">VALIDATE</text>
 <rect x="30" y="110" width="230" height="730" rx="16" fill="#161b22" stroke="#30363d" stroke-width="1" filter="url(#shadow)"/>
 <text x="50" y="144" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="800" fill="#e6edf3" text-anchor="start">Patient tumours</text>
 <text x="50" y="164" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">Internal discovery cohort</text>
@@ -262,12 +255,9 @@
 <path d="M185,610 q0,-11 8,-11 q8,0 8,11 z" fill="#BA0C2F"/>
 <circle cx="218" cy="592" r="5.2" fill="#BA0C2F"/>
 <path d="M210,610 q0,-11 8,-11 q8,0 8,11 z" fill="#BA0C2F"/>
-<text x="145.0" y="690" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="44" font-weight="800" fill="#e6edf3" text-anchor="middle">25</text>
-<text x="145.0" y="714" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9198a1" text-anchor="middle">patients</text>
-<rect x="93.0" y="732" width="80.1" height="22.5" rx="11.25" fill="#21262d"/>
-<text x="133.05" y="747.0" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5" font-weight="600" fill="#c9d1d9" text-anchor="middle">P01 – P25</text>
-<text x="145.0" y="790" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9198a1" text-anchor="middle">pseudonymised; no clinical</text>
-<text x="145.0" y="806" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9198a1" text-anchor="middle">or accession identifiers</text>
+<rect x="46" y="670" width="198" height="150" rx="12" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+<text x="145.0" y="768" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="84" font-weight="800" fill="#e6edf3" text-anchor="middle" letter-spacing="-2">25</text>
+<text x="145.0" y="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="800" fill="#9198a1" text-anchor="middle" letter-spacing="3">PATIENTS</text>
 <rect x="300" y="110" width="540" height="190" rx="16" fill="#161b22" stroke="#30363d" stroke-width="1" filter="url(#shadow)"/>
 <rect x="300" y="110" width="6" height="190" fill="#00A9B7" rx="3"/>
 <circle cx="336" cy="140" r="15" fill="#00A9B7"/>
@@ -1645,43 +1635,33 @@
 <line x1="1154" y1="782" x2="1326" y2="782" stroke="#ffffff" stroke-opacity="0.35"/>
 <text x="1240.0" y="812" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">higher score  →  worse prognosis</text>
 <line x1="1240.0" y1="482" x2="1240.0" y2="507.0" stroke="#BA0C2F" stroke-width="2.4" marker-end="url(#arrowC)"/>
-<rect x="1380" y="110" width="190" height="240" rx="16" fill="#161b22" stroke="#BA0C2F" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="1380" y="110" width="190" height="250" rx="16" fill="#161b22" stroke="#BA0C2F" stroke-width="2.5" filter="url(#shadow)"/>
 <rect x="1484" y="99" width="76" height="22" rx="11" fill="#BA0C2F"/>
 <text x="1522" y="114" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="800" fill="#fff" text-anchor="middle" letter-spacing="1.2">PRIMARY</text>
 <text x="1396" y="140" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#e6edf3" text-anchor="start">Danish cohort</text>
 <text x="1396" y="157" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9198a1" text-anchor="start">n = 54 · overall survival</text>
-<path d="M1402,170 V278 H1548" fill="none" stroke="#6e7681" stroke-width="1.2"/>
-<path d="M1402,174 H1423.9 V180.5 H1453.1 V185.9 H1489.6 V192.4 H1518.8 V196.7 H1548" fill="none" stroke="#00A9B7" stroke-width="2.4"/>
-<path d="M1402,174 H1413.7 V187.0 H1428.3 V202.1 H1445.8 V217.2 H1467.7 V230.2 H1496.9 V241.0 H1548" fill="none" stroke="#BA0C2F" stroke-width="2.4"/>
-<text x="1548" y="204.56" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#00A9B7" text-anchor="end">low</text>
-<text x="1548" y="259.64" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#ff6b85" text-anchor="end">high</text>
-<text x="1475.0" y="292" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#9198a1" text-anchor="middle">months → 60</text>
-<text x="1396" y="312" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="800" fill="#ff6b85" text-anchor="start">C = 0.671</text>
-<text x="1396" y="332" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9198a1" text-anchor="start">HR / SD 1.74  ·  p = 0.017</text>
-<path d="M1350,680.0 C1366,680.0 1350,230.0 1367,230.0" fill="none" stroke="#BA0C2F" stroke-width="3" marker-end="url(#arrowC)"/>
-<rect x="1380" y="366" width="190" height="200" rx="16" fill="#161b22" stroke="#30363d" stroke-width="1" filter="url(#shadow)"/>
-<text x="1396" y="396" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#e6edf3" text-anchor="start">MD Anderson CCR2020</text>
-<text x="1396" y="413" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9198a1" text-anchor="start">n = 54 · ACC-I vs ACC-II</text>
-<path d="M1402,426 V504 H1548" fill="none" stroke="#6e7681" stroke-width="1.2"/>
-<line x1="1402" y1="504" x2="1548" y2="426" stroke="#3a4048" stroke-dasharray="3 3"/>
-<path d="M1402,504 C1406,441.6 1438.5,430 1548,426" fill="#BA0C2F" fill-opacity="0.12" stroke="#BA0C2F" stroke-width="2.4"/>
-<text x="1396" y="528" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="800" fill="#ff6b85" text-anchor="start">AUC = 0.884</text>
-<text x="1396" y="548" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9198a1" text-anchor="start">molecular subtype</text>
-<path d="M1350,680.0 C1366,680.0 1350,466.0 1367,466.0" fill="none" stroke="#BA0C2F" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arrowC)"/>
-<rect x="1380" y="582" width="190" height="186" rx="16" fill="#161b22" stroke="#30363d" stroke-width="1" filter="url(#shadow)"/>
-<text x="1396" y="612" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#e6edf3" text-anchor="start">Frerich 2018</text>
-<text x="1396" y="629" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9198a1" text-anchor="start">n = 66 · cross-platform</text>
-<path d="M1402,642 V706 H1548" fill="none" stroke="#6e7681" stroke-width="1.2"/>
-<line x1="1419.52" y1="642" x2="1419.52" y2="706" stroke="#3a4048" stroke-dasharray="3 3"/>
-<text x="1419.52" y="719" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#9198a1" text-anchor="middle">1</text>
-<line x1="1457.48" y1="674.0" x2="1540.7" y2="674.0" stroke="#BA0C2F" stroke-width="2.4"/>
-<rect x="1491.36" y="667.0" width="14" height="14" fill="#BA0C2F"/>
-<text x="1498.36" y="660.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#9198a1" text-anchor="middle">odds ratio</text>
-<text x="1396" y="730" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="800" fill="#ff6b85" text-anchor="start">OR = 7.5</text>
-<text x="1396" y="750" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9198a1" text-anchor="start">subtype replication</text>
-<path d="M1350,680.0 C1366,680.0 1350,675.0 1367,675.0" fill="none" stroke="#BA0C2F" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arrowC)"/>
-<rect x="1380" y="784" width="190" height="56" rx="12" fill="#3d1019"/>
-<text x="1475.0" y="809" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#ff6b85" text-anchor="middle">External cohorts never</text>
-<text x="1475.0" y="826" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#ff6b85" text-anchor="middle">entered any fit</text>
-<text x="40" y="864" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#9198a1" text-anchor="start" font-style="italic">Illustrative schematic — glyphs are stylised, not data. Statistics as reported in the manuscript.</text>
+<path d="M1402,170 V328 H1548" fill="none" stroke="#6e7681" stroke-width="1.2"/>
+<path d="M1402,174 H1423.9 V183.5 H1453.1 V191.4 H1489.6 V200.9 H1518.8 V207.2 H1548" fill="none" stroke="#00A9B7" stroke-width="2.4"/>
+<path d="M1402,174 H1413.7 V193.0 H1428.3 V215.1 H1445.8 V237.2 H1467.7 V256.2 H1496.9 V272.0 H1548" fill="none" stroke="#BA0C2F" stroke-width="2.4"/>
+<text x="1548" y="220.56" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#00A9B7" text-anchor="end">low</text>
+<text x="1548" y="301.14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#ff6b85" text-anchor="end">high</text>
+<text x="1475.0" y="342" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#9198a1" text-anchor="middle">months → 60</text>
+<path d="M1350,680.0 C1366,680.0 1350,235.0 1367,235.0" fill="none" stroke="#BA0C2F" stroke-width="3" marker-end="url(#arrowC)"/>
+<rect x="1380" y="376" width="190" height="224" rx="16" fill="#161b22" stroke="#30363d" stroke-width="1" filter="url(#shadow)"/>
+<text x="1396" y="406" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#e6edf3" text-anchor="start">MD Anderson CCR2020</text>
+<text x="1396" y="423" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9198a1" text-anchor="start">n = 54 · ACC-I vs ACC-II</text>
+<path d="M1402,436 V568 H1548" fill="none" stroke="#6e7681" stroke-width="1.2"/>
+<line x1="1402" y1="568" x2="1548" y2="436" stroke="#3a4048" stroke-dasharray="3 3"/>
+<path d="M1402,568 C1406,462.4 1438.5,440 1548,436" fill="#BA0C2F" fill-opacity="0.12" stroke="#BA0C2F" stroke-width="2.4"/>
+<path d="M1350,680.0 C1366,680.0 1350,488.0 1367,488.0" fill="none" stroke="#BA0C2F" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arrowC)"/>
+<rect x="1380" y="616" width="190" height="224" rx="16" fill="#161b22" stroke="#30363d" stroke-width="1" filter="url(#shadow)"/>
+<text x="1396" y="646" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#e6edf3" text-anchor="start">Frerich 2018</text>
+<text x="1396" y="663" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9198a1" text-anchor="start">n = 66 · cross-platform</text>
+<path d="M1402,676 V808 H1548" fill="none" stroke="#6e7681" stroke-width="1.2"/>
+<line x1="1419.52" y1="676" x2="1419.52" y2="808" stroke="#3a4048" stroke-dasharray="3 3"/>
+<text x="1419.52" y="821" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#9198a1" text-anchor="middle">1</text>
+<line x1="1457.48" y1="742.0" x2="1540.7" y2="742.0" stroke="#BA0C2F" stroke-width="2.4"/>
+<rect x="1491.36" y="735.0" width="14" height="14" fill="#BA0C2F"/>
+<text x="1498.36" y="728.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#9198a1" text-anchor="middle">odds ratio</text>
+<path d="M1350,680.0 C1366,680.0 1350,728.0 1367,728.0" fill="none" stroke="#BA0C2F" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arrowC)"/>
 </svg>

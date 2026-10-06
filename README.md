@@ -58,7 +58,7 @@ Every top-level folder corresponds to a numbered section of the paper's Suppleme
 <details>
 <summary><b>Text version</b></summary>
 
-1. **Patient tumours**: internal discovery cohort of 25 patients (pseudonymised P01–P25), favourable (> 5 y) vs poor (< 2 y) survival.
+1. **Patient tumours**: internal discovery cohort of 25 patients, favourable (> 5 y) vs poor (< 2 y) survival.
 2. **Three molecular views** of the same disease:
    - **01 Bulk RNA-seq**: 20 tumours, 10 sites. PyDESeq2 · GSEA · WGCNA · ORA.
    - **02 Single-cell RNA-seq**: 24 samples. scVI · three-way doublet consensus · pseudobulk DE. It feeds **03 scCODA** (cell-type abundance), **04 CellPhoneDB** (cell–cell communication) and **05 Trajectory** (CytoTRACE2 · Monocle3).
@@ -66,7 +66,7 @@ Every top-level folder corresponds to a numbered section of the paper's Suppleme
 3. **Candidate genes** pooled from all three views.
 4. **07 Three-level hierarchical Bayesian shrinkage** (source → module → gene, ADVI).
 5. **Locked four-gene panel**: DSCAM · ODC1 · NCAPG · CCNB2.
-6. **External validation**: Danish cohort (n = 54, overall survival, C = 0.671, HR/SD 1.74; the single primary claim); CCR2020 MD Anderson (n = 54, ACC-I vs ACC-II subtype, AUC = 0.884); Frerich 2018 (n = 66, cross-platform replication, OR = 7.5).
+6. **External validation**: Danish cohort (n = 54, overall survival; the single primary claim); MD Anderson CCR2020 (n = 54, ACC-I vs ACC-II subtype); Frerich 2018 (n = 66, cross-platform replication).
 
 </details>
 
