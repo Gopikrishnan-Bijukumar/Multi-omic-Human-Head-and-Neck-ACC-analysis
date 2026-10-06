@@ -46,10 +46,14 @@ Every top-level folder corresponds to a numbered section of the paper's Suppleme
 
 ## How the pieces fit together
 
+<a href="docs/pipeline-light.svg?raw=true" title="Open the full-size diagram">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/pipeline-dark.svg">
   <img src="docs/pipeline-light.svg" width="100%" alt="Analysis pipeline: tumours from 25 patients with favourable or poor outcome are profiled by bulk RNA-seq, single-cell RNA-seq (with scCODA, CellPhoneDB and trajectory analyses) and spatial transcriptomics; candidate genes from all three are filtered by three-level hierarchical Bayesian shrinkage into a locked four-gene panel (DSCAM, ODC1, NCAPG, CCNB2), validated in the Danish, MD Anderson CCR2020 and Frerich 2018 cohorts.">
 </picture>
+</a>
+
+<p align="center"><sub>🔍 Click the diagram to open it full size, then zoom with your browser (Ctrl/⌘ +). It stays sharp at any zoom.</sub></p>
 
 <details>
 <summary><b>Text version</b></summary>
