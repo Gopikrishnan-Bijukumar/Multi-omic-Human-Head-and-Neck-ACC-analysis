@@ -145,12 +145,6 @@ location, so the repository can live anywhere.
 Sample identifiers throughout are **pseudonyms** (`P01`–`P25`) and do not correspond to any
 clinical, pathology or accession number.
 
-> [!NOTE]
-> **Two column names differ from the originals.** `ModelOutcome1` and `ModelOutcome2` were
-> renamed when this repository was prepared. If you are running these scripts against the
-> original `.h5ad` or trait table, rename the corresponding columns to match, or the scripts
-> will raise a `KeyError`.
-
 > [!IMPORTANT]
 > **Do not install everything into one environment.** The pipelines ran in several separate
 > conda environments — scCODA and CellPhoneDB pin conflicting dependencies. Dependencies are
