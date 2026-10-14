@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 860" width="1600" height="860" role="img" aria-labelledby="ttl desc">
 <title id="ttl">Multi-omic analysis pipeline for head and neck adenoid cystic carcinoma</title>
-<desc id="desc">Patient tumours are profiled by bulk RNA-seq, single-cell RNA-seq and spatial transcriptomics; candidate genes from all three are filtered by hierarchical Bayesian shrinkage into a locked four-gene panel (DSCAM, ODC1, NCAPG, CCNB2), validated in three external cohorts.</desc>
+<desc id="desc">Patient tumors are profiled by bulk RNA-seq, single-cell RNA-seq and spatial transcriptomics; candidate genes from all three are filtered by hierarchical Bayesian shrinkage into a locked four-gene panel (DSCAM, ODC1, NCAPG, CCNB2), validated in three external cohorts.</desc>
 <defs>
   <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
     <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000000" flood-opacity="0.45"/>
@@ -34,9 +34,9 @@
   </marker>
 </defs>
 <rect width="1600" height="860" rx="22" fill="#0d1117"/>
-<text x="40" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="38" font-weight="800" fill="#e6edf3" text-anchor="start" letter-spacing="-0.5">From tumour tissue to a four-gene prognostic panel</text>
+<text x="40" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="38" font-weight="800" fill="#e6edf3" text-anchor="start" letter-spacing="-0.5">From tumor tissue to a four-gene prognostic panel</text>
 <rect x="30" y="110" width="230" height="730" rx="16" fill="#161b22" stroke="#30363d" stroke-width="1" filter="url(#shadow)"/>
-<text x="50" y="144" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="800" fill="#e6edf3" text-anchor="start">Patient tumours</text>
+<text x="50" y="144" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="800" fill="#e6edf3" text-anchor="start">Patient tumors</text>
 <text x="50" y="164" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">Internal discovery cohort</text>
 <clipPath id="clip7"><path d="M242.6,285.0 240.3,307.7 228.1,326.8 212.9,341.6 197.9,354.4 181.9,365.1 163.7,370.7 145.0,370.8 126.6,369.2 106.7,368.2 85.0,363.7 66.9,350.1 59.0,328.3 61.4,304.9 66.6,285.0 68.7,266.8 69.5,247.0 75.3,226.9 88.2,210.6 105.5,199.3 124.5,191.3 145.0,186.8 165.8,189.8 183.0,202.4 194.7,219.8 204.5,235.4 217.6,248.4 233.0,264.0Z"/></clipPath>
 <path d="M242.6,285.0 240.3,307.7 228.1,326.8 212.9,341.6 197.9,354.4 181.9,365.1 163.7,370.7 145.0,370.8 126.6,369.2 106.7,368.2 85.0,363.7 66.9,350.1 59.0,328.3 61.4,304.9 66.6,285.0 68.7,266.8 69.5,247.0 75.3,226.9 88.2,210.6 105.5,199.3 124.5,191.3 145.0,186.8 165.8,189.8 183.0,202.4 194.7,219.8 204.5,235.4 217.6,248.4 233.0,264.0Z" fill="#5b2a3c" stroke="#a8577a" stroke-width="1.5" stroke-linejoin="round"/>
@@ -221,7 +221,7 @@
 </g>
 <text x="145.0" y="402" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#9198a1" text-anchor="middle" font-style="italic">H&amp;E · cribriform ACC</text>
 <rect x="46" y="424" width="198" height="96" rx="12" fill="#0b3a3f" stroke="#00A9B7" stroke-width="1"/>
-<text x="60" y="446" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="800" fill="#00A9B7" text-anchor="start">Favourable outcome</text>
+<text x="60" y="446" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="800" fill="#00A9B7" text-anchor="start">Favorable outcome</text>
 <text x="60" y="463" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#9198a1" text-anchor="start">survival &gt; 5 years</text>
 <circle cx="68" cy="480" r="5.2" fill="#00A9B7"/>
 <path d="M60,498 q0,-11 8,-11 q8,0 8,11 z" fill="#00A9B7"/>
@@ -263,7 +263,7 @@
 <text x="336" y="144.5" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="800" fill="#ffffff" text-anchor="middle">01</text>
 <text x="360" y="146" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="800" fill="#e6edf3" text-anchor="start">Bulk RNA-seq</text>
 <rect x="659.1" y="127" width="165" height="24" rx="12" fill="#0b3a3f"/>
-<text x="741.55" y="143.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#00A9B7" text-anchor="middle">20 tumours · 10 sites</text>
+<text x="741.55" y="143.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#00A9B7" text-anchor="middle">20 tumors · 10 sites</text>
 <path d="M260,285 C282,285 270,140 287,140" fill="none" stroke="#00A9B7" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow)" opacity="0.9"/>
 <rect x="338" y="174" width="30" height="9" rx="3" fill="#21262d" stroke="#6e7681" stroke-width="1.2"/>
 <path d="M340,182 h26 v22 l-9,26 q-4,6 -8,0 l-9,-26 z" fill="#161b22" stroke="#6e7681" stroke-width="1.4"/>
@@ -1483,7 +1483,7 @@
 <text x="550" y="828" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#9198a1" text-anchor="middle">Visium HD · 16 µm bins</text>
 <text x="652" y="726" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#e6edf3" text-anchor="start">Spatial modules</text>
 <circle cx="660" cy="746" r="5" fill="#00A9B7"/>
-<text x="672" y="750" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#9198a1" text-anchor="start">tumour nests</text>
+<text x="672" y="750" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#9198a1" text-anchor="start">tumor nests</text>
 <circle cx="660" cy="766" r="5" fill="#FFC72C"/>
 <text x="672" y="770" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#9198a1" text-anchor="start">interface</text>
 <circle cx="660" cy="786" r="5" fill="#BA0C2F"/>
