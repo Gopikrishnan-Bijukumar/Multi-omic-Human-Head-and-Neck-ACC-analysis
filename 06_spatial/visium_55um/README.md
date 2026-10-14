@@ -5,7 +5,7 @@
 | Script | What it does |
 |---|---|
 | `01_preprocessing.ipynb` | Pre-processing exploration for the 55 µm cohort |
-| `02_normalization_clustering.ipynb` | Normalisation and clustering exploration |
+| `02_normalization_clustering.ipynb` | Normalization and clustering exploration |
 | `03_giotto_pipeline.R` | The full per-sample Giotto pipeline (methods 7a–7e) |
 
 ## Running the pipeline
@@ -20,7 +20,7 @@ from three Section 1 values, which now come from `config/spatial_visium_samples.
 | Column | Meaning |
 |---|---|
 | `module_k` | Metagene module count, chosen per sample from the Section 6b silhouette/WSS sweep (5 / 6 / 4 / 4) |
-| `svg_plot_midpoint` | Display-only gradient midpoint on the top-SVG plots; `NA` reproduces the one sample finalised without it |
+| `svg_plot_midpoint` | Display-only gradient midpoint on the top-SVG plots; `NA` reproduces the one sample finalized without it |
 | `outcome` | Clinical outcome group |
 
 Substituting a sample's values back into this script reproduces the corresponding original

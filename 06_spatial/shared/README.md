@@ -13,7 +13,7 @@ Used by the Visium pipelines after the per-sample Giotto run.
 
 ## Run order
 
-The per-sample Giotto pipeline is one parameterised script; run it once per sample, then the
+The per-sample Giotto pipeline is one parameterized script; run it once per sample, then the
 shared stages once across all four:
 
 ```bash

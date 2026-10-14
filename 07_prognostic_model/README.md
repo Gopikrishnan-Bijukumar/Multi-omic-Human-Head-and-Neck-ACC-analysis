@@ -2,7 +2,7 @@
 
 Supplementary Methods, section 8.
 
-The bulk RNA-seq dataset (n = 20) is the internal discovery cohort, categorised as poor (< 2 year)
+The bulk RNA-seq dataset (n = 20) is the internal discovery cohort, categorized as poor (< 2 year)
 and good (> 5 year) outcome, and is used for model fitting. An independent 54-patient Danish bulk
 RNA-seq cohort is the survival validation cohort; a second cohort (N = 54, MD Anderson CCR2020)
 provides a predefined molecular subtype label for external non-survival validation; a third
@@ -27,9 +27,9 @@ reported C-index or hazard ratio.
 |---|---|
 | `release/model_spec.json` | The single definitive model specification, with the frozen discovery reference and locked threshold |
 | `release/results_dictionary.csv` | Every manuscript-facing number, each with its value, uncertainty, source file, generating script and evidence tier |
-| `release/DEPRECATED.md` | The do-not-quote map: every superseded artefact and the wrong number it would produce |
+| `release/DEPRECATED.md` | The do-not-quote map: every superseded artifact and the wrong number it would produce |
 | `release/score_acc4.py` | The one scoring function (cohort-batch and frozen single-sample), verified against the stored scores |
-| `release/MANIFEST.json` | sha256 fingerprints of every raw and harmonised input |
+| `release/MANIFEST.json` | sha256 fingerprints of every raw and harmonized input |
 | `release/environment.txt`, `release/requirements-frozen.txt` | The exact environment behind every published number |
 
 Script filenames are kept exactly as they were when the results were generated, because
@@ -41,7 +41,7 @@ the order stages were run, not a clean pipeline order.
 | Script | Methods element |
 |---|---|
 | `03_data.py` | Data assembly, rank-inverse-normal transform, evidence prior weights |
-| `modules.py` | The 52 biological modules (curated programmes, WGCNA modules, single-cell DE, evidence sets) forming the middle level of the hierarchy |
+| `modules.py` | The 52 biological modules (curated programs, WGCNA modules, single-cell DE, evidence sets) forming the middle level of the hierarchy |
 | `mlbayes.py` | The model: three-level shrinkage (source → module → gene) fitted by ADVI |
 | `bayes.py`, `common.py` | Supporting inference and input-fingerprinting utilities |
 | `20_pseudobulk.py` | Single-cell pseudobulk differential expression in differentially enriched cell types, one of the three nomination sources |

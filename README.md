@@ -15,8 +15,8 @@
 ## The study in one paragraph
 
 Adenoid cystic carcinoma of the head and neck is indolent for years and then, in some patients,
-is not. This repository holds the analysis code for a multi-omic comparison of tumours from
-patients with **poor (< 2 years)** and **favourable (> 5 years)** survival, across bulk RNA-seq,
+is not. This repository holds the analysis code for a multi-omic comparison of tumors from
+patients with **poor (< 2 years)** and **favorable (> 5 years)** survival, across bulk RNA-seq,
 single-cell RNA-seq and spatial transcriptomics — and the derivation of a four-gene prognostic
 panel validated in three independent external cohorts.
 
@@ -49,7 +49,7 @@ Every top-level folder corresponds to a numbered section of the paper's Suppleme
 <a href="https://raw.githubusercontent.com/Gopikrishnan-Bijukumar/Multi-omic-Human-Head-and-Neck-ACC-analysis/main/docs/pipeline-light.svg" title="Open the full-size diagram">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/pipeline-dark.svg">
-  <img src="docs/pipeline-light.svg" width="100%" alt="Analysis pipeline: tumours from 25 patients with favourable or poor outcome are profiled by bulk RNA-seq, single-cell RNA-seq (with scCODA, CellPhoneDB and trajectory analyses) and spatial transcriptomics; candidate genes from all three are filtered by three-level hierarchical Bayesian shrinkage into a locked four-gene panel (DSCAM, ODC1, NCAPG, CCNB2), validated in the Danish, MD Anderson CCR2020 and Frerich 2018 cohorts.">
+  <img src="docs/pipeline-light.svg" width="100%" alt="Analysis pipeline: tumors from 25 patients with favorable or poor outcome are profiled by bulk RNA-seq, single-cell RNA-seq (with scCODA, CellPhoneDB and trajectory analyses) and spatial transcriptomics; candidate genes from all three are filtered by three-level hierarchical Bayesian shrinkage into a locked four-gene panel (DSCAM, ODC1, NCAPG, CCNB2), validated in the Danish, MD Anderson CCR2020 and Frerich 2018 cohorts.">
 </picture>
 </a>
 
@@ -58,9 +58,9 @@ Every top-level folder corresponds to a numbered section of the paper's Suppleme
 <details>
 <summary><b>Text version</b></summary>
 
-1. **Patient tumours**: internal discovery cohort of 25 patients, favourable (> 5 y) vs poor (< 2 y) survival.
+1. **Patient tumors**: internal discovery cohort of 25 patients, favorable (> 5 y) vs poor (< 2 y) survival.
 2. **Three molecular views** of the same disease:
-   - **01 Bulk RNA-seq**: 20 tumours, 10 sites. PyDESeq2 · GSEA · WGCNA · ORA.
+   - **01 Bulk RNA-seq**: 20 tumors, 10 sites. PyDESeq2 · GSEA · WGCNA · ORA.
    - **02 Single-cell RNA-seq**: 24 samples. scVI · three-way doublet consensus · pseudobulk DE. It feeds **03 scCODA** (cell-type abundance), **04 CellPhoneDB** (cell–cell communication) and **05 Trajectory** (CytoTRACE2 · Monocle3).
    - **06 Spatial**: 4 Visium (55 µm) and 2 Visium HD (16 µm). Giotto · SpatialDWLS.
 3. **Candidate genes** pooled from all three views.
@@ -95,7 +95,7 @@ panels — no image files are distributed here.
 
 | Cohort | n | Role | Used for fitting? |
 |---|---|---|---|
-| Internal bulk RNA-seq | 20 tumours, 10 sites | Discovery; model fitting | ✅ yes |
+| Internal bulk RNA-seq | 20 tumors, 10 sites | Discovery; model fitting | ✅ yes |
 | Internal single-cell RNA-seq | 24 samples (13 good, 11 poor) | Cell-type discovery, candidate nomination, deconvolution reference | ✅ yes |
 | Internal spatial | 4 Visium (55 µm), 2 Visium HD (16 µm) | Spatial architecture | — |
 | **Danish bulk RNA-seq** | 54 | Confirmatory external survival validation — the single primary claim | ❌ never entered any fit |
@@ -140,7 +140,7 @@ clinical, pathology or accession number.
 | The model itself | [`07_prognostic_model/release/model_spec.json`](07_prognostic_model/release/model_spec.json) — genes, signs, frozen reference, locked threshold |
 | To score new samples | [`07_prognostic_model/release/score_acc4.py`](07_prognostic_model/release/score_acc4.py) — the one scoring function, cohort-batch and frozen single-sample |
 | A specific number from the paper | [`07_prognostic_model/release/results_dictionary.csv`](07_prognostic_model/release/results_dictionary.csv) — every manuscript-facing value with its source file, generating script and evidence tier |
-| To know what **not** to quote | [`07_prognostic_model/release/DEPRECATED.md`](07_prognostic_model/release/DEPRECATED.md) — superseded artefacts and the wrong numbers they would produce |
+| To know what **not** to quote | [`07_prognostic_model/release/DEPRECATED.md`](07_prognostic_model/release/DEPRECATED.md) — superseded artifacts and the wrong numbers they would produce |
 
 ---
 
@@ -150,7 +150,7 @@ The prognostic model ships as a frozen release rather than a re-runnable pipelin
 published numbers came from one specific environment against one specific set of inputs:
 
 - [`release/MANIFEST.json`](07_prognostic_model/release/MANIFEST.json) — sha256 fingerprints of
-  every raw and harmonised input, including the external cohorts
+  every raw and harmonized input, including the external cohorts
 - [`release/environment.txt`](07_prognostic_model/release/environment.txt) and
   [`release/requirements-frozen.txt`](07_prognostic_model/release/requirements-frozen.txt) — the
   interpreter, GPU and package versions actually used
@@ -167,6 +167,6 @@ Danish score and the reported frozen-reference C-index, or the build fails.
 
 If you use this code, please cite the associated manuscript.
 
-## Licence
+## License
 
 [MIT](LICENSE).

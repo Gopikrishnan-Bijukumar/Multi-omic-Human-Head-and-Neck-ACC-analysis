@@ -6,12 +6,12 @@ trail and must not be quoted.
 
 > **Reading this outside the project tree.** This document was written against the working
 > project directory, and most paths below (`work/...`, `outputs/...`, and the review documents
-> in "Stale narrative") name **result artefacts and internal notes that are not distributed
+> in "Stale narrative") name **result artifacts and internal notes that are not distributed
 > with this repository**. They are named so the audit trail is complete and so anyone with the
 > data tree can find them — not because they ship here. The files that *do* ship are the ones
 > under `release/`, plus the numbered scripts in `07_prognostic_model/`.
 
-## Superseded model artefacts
+## Superseded model artifacts
 
 | File | What it is | Why it is not the model |
 |---|---|---|

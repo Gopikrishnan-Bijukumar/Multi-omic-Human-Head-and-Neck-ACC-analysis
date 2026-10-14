@@ -2,7 +2,7 @@
 
 Supplementary Methods, Single cell section 5 (5a–5d). CellPhoneDB 5.0.1, statistical analysis
 method with interaction scoring enabled. Expression is taken from the raw count layer of the
-single-cell object, normalised to 10,000 transcripts per cell and log1p transformed. Statistical
+single-cell object, normalized to 10,000 transcripts per cell and log1p transformed. Statistical
 testing uses 1,500 permutations at p < 0.05.
 
 ## Run order

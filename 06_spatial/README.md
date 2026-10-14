@@ -11,15 +11,15 @@ Human Transcriptome Probe Set v2.0 (10x Genomics) and processed independently wi
 
 ## Pipeline stages (7a–7e)
 
-**7a Pre-processing and normalisation.** Filtered feature barcode matrices and spatial
+**7a Pre-processing and normalization.** Filtered feature barcode matrices and spatial
 coordinates are loaded with `createGiottoVisiumObject` and restricted to spots/bins marked as on
 tissue. Mitochondrial and ribosomal genes are removed before quality control filtering. Bins are
 retained if at least 50 or 200 genes were detected at 16 µm and 55 µm resolution respectively,
 and genes if detected in at least 50 bins in HD and 10 bins at standard resolution. Counts are
-normalised and log-transformed with `normalizeGiotto`.
+normalized and log-transformed with `normalizeGiotto`.
 
 **7b Dimensionality reduction, clustering and spatial network.** Highly variable genes via
-`calculateHVF`; PCA on those genes; the first 15 PCs used for UMAP and shared nearest neighbour
+`calculateHVF`; PCA on those genes; the first 15 PCs used for UMAP and shared nearest neighbor
 graph generation (k = 15); Leiden clustering at resolution 0.5; a Delaunay triangulation spatial
 network with a minimum k of 2 used for all downstream spatial analyses.
 
@@ -39,11 +39,11 @@ topping its ranking, the primary ranking excludes member genes using `excl_membe
 
 **7e Deconvolution and immune infiltration.** Cell type composition estimated using spatial
 dampened weighted least squares (SpatialDWLS) with the single-cell data as reference. Per-Leiden
-domain and per-spatial-block compositions are summarised per sample, using blocks of
+domain and per-spatial-block compositions are summarized per sample, using blocks of
 400 × 400 µm² for HD and a 600 µm × 600 µm hexagonal lattice for standard Visium. Cross-sample
 comparisons between outcome groups are descriptive only; no statistical tests were computed.
-Immune infiltration is summarised as the summed proportion of myeloid, T-cell and B/plasma cells
-(not normalised).
+Immune infiltration is summarized as the summed proportion of myeloid, T-cell and B/plasma cells
+(not normalized).
 
 ## A note on CytoSPACE
 
