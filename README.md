@@ -53,7 +53,6 @@ Every top-level folder corresponds to a numbered section of the paper's Suppleme
 </picture>
 </a>
 
-<p align="center"><sub>🔍 Click the diagram to open it full size, then zoom with your browser (Ctrl/⌘ +). It stays sharp at any zoom.</sub></p>
 
 <details>
 <summary><b>Text version</b></summary>
