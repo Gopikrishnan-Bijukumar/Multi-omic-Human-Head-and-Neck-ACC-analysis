@@ -1,0 +1,59 @@
+# CellPhoneDB v5 clinical-outcome analysis -- shared configuration.
+#
+# This file is the single source of truth for every notebook in this
+# folder. Load it with utils.load_config(); never re-declare any
+# of these values inside a notebook. The sha256 of the resolved config
+# (utils.config_hash) is stamped into every _SUCCESS.json so that a run
+# performed under a different configuration is never mistaken for complete.
+
+project_root: ${ACC_DATA_ROOT}
+input_h5ad: ${ACC_DATA_ROOT}/outputs/h5ad_files/inprogress_3.h5ad
+cpdb_database: ${ACC_DATA_ROOT}/reference/cellphonedb/cellphonedb.zip
+code_root: .   # this folder (resolved relative to config.yaml)
+output_root: ${ACC_DATA_ROOT}/outputs/cellphoneDB/clinical_outcome
+
+sample_column: batch
+cell_type_column: annot_6
+outcome_column: clinical_outcome
+counts_layer: counts
+outcomes: [Good, Poor]
+
+patient_celltype_min_cells: 10
+pooled_celltype_min_per_group: 10
+pooled_downsample_seeds: [0, 1, 2, 3, 4]
+secondary_core_min_patients: 22
+abundance_sensitivity_threshold: null
+
+cpdb_iterations: 1500
+cpdb_expression_fraction: 0.1
+cpdb_nominal_pvalue: 0.05
+cpdb_debug_seed: 6
+cpdb_result_precision: 6
+threads: 20
+
+min_evaluable_per_group: 6
+min_nonzero_total: 6
+fdr_method: fdr_bh
+fdr_alpha: 0.05
+bootstrap_resamples: 10000
+permutation_resamples: 99999
+analysis_seed: 20260731
+mannwhitney_method: hybrid
+
+# --- Covariates -------------------------------------------------------------
+# Anatomical site is read from the "Site of Extraction" column of covariate_csv.
+# obs['site'] records Base of Tongue under two labels (BOT, BaseofTongue) and
+# Unknown as the string "NA", so it is not used.
+# No age, sex, stage, treatment, tumor purity or processing batch is available.
+covariates_available: [site_of_extraction]
+covariate_csv: ${ACC_DATA_ROOT}/clinical_info.csv
+covariate_column_map:
+  site_of_extraction: Site of Extraction
+# obs columns not used by the analysis
+forbidden_obs_columns: [batch_1, site, model_outcome, outcome]
+
+# --- Survival ---------------------------------------------------------------
+# "Years" takes only the values 2, 3, 5 and clinical_outcome is a deterministic
+# function of it (2 -> Poor; 3, 5 -> Good). There is no event indicator or
+# continuous follow-up time.
+survival_aware_analysis: not_possible

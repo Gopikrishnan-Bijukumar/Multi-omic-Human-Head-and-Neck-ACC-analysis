@@ -1,0 +1,35 @@
+# ---------------------------------------------------------------------------
+# Mapping from the P01-P25 pseudonyms to original sample identifiers.
+# ---------------------------------------------------------------------------
+ID_MAPPING_PRIVATE.csv
+**/ID_MAPPING_PRIVATE.csv
+*_PRIVATE*
+**/*_PRIVATE*
+*PRIVATE*.csv
+
+# Local build tooling (not part of the analysis code)
+_build_tooling/
+
+# Data and results are not distributed with this repository
+data/
+outputs/
+reference/
+*.h5
+*.h5ad
+*.rds
+*.RDS
+*.mtx
+*.loom
+
+# Notebook and interpreter state
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.Rhistory
+.RData
+.Rproj.user/
+
+# OS noise
+.DS_Store
+Thumbs.db

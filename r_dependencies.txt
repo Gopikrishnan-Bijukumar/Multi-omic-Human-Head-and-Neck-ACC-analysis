@@ -1,0 +1,54 @@
+# R dependencies for the analyses in this repository.
+# R version 4.4.3 (2025-02-28).
+#
+# Bioconductor 3.20. Giotto 4.2.2 (with GiottoClass 0.4.10, GiottoUtils 0.2.5,
+# GiottoVisuals 0.2.14) as reported in the Supplementary Methods as v4.4.3 of
+# the Giotto Suite ecosystem.
+
+# --- CRAN ---
+ggplot2
+ggrastr
+ggrepel
+cowplot
+patchwork
+dplyr
+tidyr
+tibble
+data.table
+Matrix
+igraph
+viridis
+RColorBrewer
+gplots
+svglite
+ragg
+png
+jsonlite
+cluster
+quadprog
+Rfast
+reticulate
+
+# --- Bioconductor ---
+DESeq2
+SingleCellExperiment
+SummarizedExperiment
+scran
+scuttle
+zellkonverter
+rhdf5
+HDF5Array
+WGCNA
+fgsea
+
+# --- GitHub / non-standard ---
+# WGCNA co-expression network analysis (section 01)
+# Giotto Suite spatial analysis (section 06) - drieslab/Giotto
+Giotto
+GiottoData
+# spatial deconvolution (section 06) - dmcable/DWLS or Giotto's runDWLSDeconv
+DWLS
+# trajectory inference (section 05) - cole-trapnell-lab/monocle3
+monocle3
+# developmental potential (section 05) - digitalcytometry/cytotrace2
+CytoTRACE2

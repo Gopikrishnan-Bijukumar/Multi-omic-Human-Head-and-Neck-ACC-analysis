@@ -1,0 +1,167 @@
+<div align="center">
+
+# Head & Neck Adenoid Cystic Carcinoma — Multi-omic Analysis
+
+**Bulk RNA-seq · single-cell RNA-seq · spatial transcriptomics · a locked four-gene prognostic panel**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-0b7285.svg)](LICENSE)
+[![Python 3.11.15](https://img.shields.io/badge/Python-3.11.15-3776ab.svg)](requirements.txt)
+[![R 4.4.3](https://img.shields.io/badge/R-4.4.3-276dc3.svg)](r_dependencies.txt)
+
+</div>
+
+---
+
+## The study in one paragraph
+
+Adenoid cystic carcinoma of the head and neck is indolent for years and then, in some patients,
+is not. This repository holds the analysis code for a multi-omic comparison of tumors from
+patients with **poor (< 2 years)** and **favorable (> 5 years)** survival, across bulk RNA-seq,
+single-cell RNA-seq and spatial transcriptomics — and the derivation of a four-gene prognostic
+panel validated in three independent external cohorts.
+
+Every top-level folder corresponds to a numbered section of the paper's Supplementary Methods.
+
+> ### The panel
+>
+> **`DSCAM` · `ODC1` · `NCAPG` · `CCNB2`** — scored as the unweighted mean of sign-weighted
+> rank-inverse-normal expression, higher meaning worse prognosis.
+>
+> | | Danish cohort (n = 54) |
+> |---|---|
+> | 5-year overall survival, C-index | **0.671** (0.541–0.801) |
+> | Hazard ratio per score SD | **1.74** (1.10–2.75), p = 0.017 |
+> | Time-dependent AUC at 60 months | **0.688** (0.526–0.832) |
+>
+> Separately, the same score separates the MD Anderson ACC-I / ACC-II molecular subtypes at
+> **AUC 0.884** (0.773–0.968), replicated in Frerich 2018.
+>
+> No expression or outcome data from any external cohort contributed to gene selection or
+> model fitting. A three-level hierarchical Bayesian shrinkage procedure (source → module →
+> gene, fitted by ADVI) selected the genes and their directions; the deployed score is an
+> unweighted mean.
+
+---
+
+## How the pieces fit together
+
+<a href="https://raw.githubusercontent.com/Gopikrishnan-Bijukumar/Multi-omic-Human-Head-and-Neck-ACC-analysis/main/docs/pipeline-light.svg" title="Open the full-size diagram">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/pipeline-dark.svg">
+  <img src="docs/pipeline-light.svg" width="100%" alt="Analysis pipeline: tumors from 25 patients with favorable or poor outcome are profiled by bulk RNA-seq, single-cell RNA-seq (with scCODA, CellPhoneDB and trajectory analyses) and spatial transcriptomics; candidate genes from all three are filtered by three-level hierarchical Bayesian shrinkage into a locked four-gene panel (DSCAM, ODC1, NCAPG, CCNB2), validated in the Danish, MD Anderson CCR2020 and Frerich 2018 cohorts.">
+</picture>
+</a>
+
+
+<details>
+<summary><b>Text version</b></summary>
+
+1. **Patient tumors**: internal discovery cohort of 25 patients, favorable (> 5 y) vs poor (< 2 y) survival.
+2. **Three molecular views** of the same disease:
+   - **01 Bulk RNA-seq**: 20 tumors, 10 sites. PyDESeq2 · GSEA · WGCNA · ORA.
+   - **02 Single-cell RNA-seq**: 24 samples. scVI · three-way doublet consensus · pseudobulk DE. It feeds **03 scCODA** (cell-type abundance), **04 CellPhoneDB** (cell–cell communication) and **05 Trajectory** (CytoTRACE2 · Monocle3).
+   - **06 Spatial**: 4 Visium (55 µm) and 2 Visium HD (16 µm). Giotto · SpatialDWLS.
+3. **Candidate genes** pooled from all three views.
+4. **07 Three-level hierarchical Bayesian shrinkage** (source → module → gene, ADVI).
+5. **Locked four-gene panel**: DSCAM · ODC1 · NCAPG · CCNB2.
+6. **External validation**: Danish cohort (n = 54, overall survival; primary endpoint); MD Anderson CCR2020 (n = 54, ACC-I vs ACC-II subtype); Frerich 2018 (n = 66, cross-platform replication).
+
+</details>
+
+---
+
+## Repository map
+
+| Folder | Supplementary Methods | Contents |
+|---|---|---|
+| [`01_bulk_rnaseq/`](01_bulk_rnaseq/) | Bulk RNA-seq 1–5 | PyDESeq2 differential expression, GSEA, WGCNA, over-representation analysis |
+| [`02_single_cell/`](02_single_cell/) | Single cell 1–3 | QC, three-way doublet consensus, scVI integration, annotation, pseudobulk DE |
+| [`03_sccoda/`](03_sccoda/) | Single cell 4 | scCODA compositional analysis of cell-type abundance |
+| [`04_cellphonedb/`](04_cellphonedb/) | Single cell 5a–5d | CellPhoneDB cell–cell communication, patient-level and pooled analyses |
+| [`05_trajectory/`](05_trajectory/) | Single cell 6 | CytoTRACE2 potency and Monocle3 trajectory inference |
+| [`06_spatial/`](06_spatial/) | Single cell 7a–7e | Giotto pipelines for Visium (55 µm) and Visium HD (16 µm) |
+| [`07_prognostic_model/`](07_prognostic_model/) | Section 8 | Hierarchical Bayesian shrinkage panel, external validation, release files |
+| [`config/`](config/) | — | Data root definition and per-sample spatial parameters |
+
+Each folder has its own README describing every script and the methods element it implements.
+`figures/` subfolders contain the notebooks and R scripts that generate the manuscript panels.
+
+---
+
+## Cohorts
+
+| Cohort | n | Role | Used for fitting? |
+|---|---|---|---|
+| Internal bulk RNA-seq | 20 tumors, 10 sites | Discovery; model fitting | ✅ yes |
+| Internal single-cell RNA-seq | 24 samples (13 good, 11 poor) | Cell-type discovery, candidate nomination, deconvolution reference | ✅ yes |
+| Internal spatial | 4 Visium (55 µm), 2 Visium HD (16 µm) | Spatial architecture | — |
+| **Danish bulk RNA-seq** | 54 | Confirmatory external survival validation (primary endpoint) | ❌ |
+| **MD Anderson CCR2020** | 54 | External validation of molecular *subtype* | ❌ |
+| **Frerich 2018** | 66 | Cross-platform replication of the subtype result (~18 patients shared with CCR2020) | ❌ |
+
+Full detail, including endpoints, event counts and survival-time availability, is in
+[`07_prognostic_model/release/cohorts.csv`](07_prognostic_model/release/cohorts.csv).
+
+---
+
+## Getting started
+
+The scripts read and write large data files (h5ad objects, Giotto objects, CellPhoneDB outputs)
+that are **not** distributed with this code. Point `ACC_DATA_ROOT` at a local copy of the data
+tree:
+
+```bash
+export ACC_DATA_ROOT=/path/to/acc_data
+```
+
+[`config/paths.py`](config/paths.py) and [`config/paths.R`](config/paths.R) are the single
+definition of that root for Python and R. Scripts resolve sibling files relative to their own
+location, so the repository can live anywhere.
+
+Sample identifiers throughout are **pseudonyms** (`P01`–`P25`) and do not correspond to any
+clinical, pathology or accession number.
+
+> [!IMPORTANT]
+> **Use separate environments.** scCODA and CellPhoneDB pin conflicting dependencies.
+> Dependencies are listed in [`requirements.txt`](requirements.txt) (Python 3.11.15) and
+> [`r_dependencies.txt`](r_dependencies.txt) (R 4.4.3);
+> [`07_prognostic_model/release/environment.txt`](07_prognostic_model/release/environment.txt)
+> records the environment used for the prognostic model.
+
+### Where to start reading
+
+| If you want… | Go to |
+|---|---|
+| The methods for one analysis | that section's `README.md` |
+| The model | [`07_prognostic_model/release/model_spec.json`](07_prognostic_model/release/model_spec.json) — genes, signs, frozen reference, locked threshold |
+| To score new samples | [`07_prognostic_model/release/score_acc4.py`](07_prognostic_model/release/score_acc4.py) — cohort-batch and frozen single-sample scoring |
+| A specific number from the paper | [`07_prognostic_model/release/results_dictionary.csv`](07_prognostic_model/release/results_dictionary.csv) — every reported value with its source file, generating script and evidence tier |
+
+---
+
+## Reproducibility
+
+The prognostic model is distributed with release files that pin its inputs, environment and
+results:
+
+- [`release/MANIFEST.json`](07_prognostic_model/release/MANIFEST.json) — sha256 fingerprints of
+  every raw and harmonized input, including the external cohorts
+- [`release/environment.txt`](07_prognostic_model/release/environment.txt) and
+  [`release/requirements-frozen.txt`](07_prognostic_model/release/requirements-frozen.txt) — the
+  interpreter, GPU and package versions actually used
+- [`release/results_dictionary.csv`](07_prognostic_model/release/results_dictionary.csv) — each
+  number tagged `confirmatory`, `prespecified`, `secondary`, `exploratory`, `audit`, `negative` or
+  `replication-not-independent`
+
+`release/build_release.py` checks that `score_acc4.py` reproduces the stored Danish score and the
+reported frozen-reference C-index.
+
+---
+
+## Citation
+
+If you use this code, please cite the associated manuscript.
+
+## License
+
+[MIT](LICENSE).
